@@ -38,6 +38,7 @@ Note: I may decide to follow these instructions for random assignments, so you s
     git clone git@github.com:zisyang/linux.git
     ```
     or download the zip file from https://github.com/zisyang/linux
+    
 7. After clone or download the code, 
     ```
     cd linux
@@ -56,7 +57,7 @@ Note: I may decide to follow these instructions for random assignments, so you s
     ```
     sudo make INSTALL_MOD_STRIP=1 modules_install
     ```
-    This can reduce the kernel build size that ignore the debug information.
+    the above line can reduce the kernel build size that ignore the debug information.
     Then,
     ```
     sudo make install
