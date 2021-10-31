@@ -100,7 +100,7 @@ struct capability_info procbased2[23] =
 	{ 25, "Use TSC scaling" }
 };
 /*
- * Exit capabilities
+ * Exit Control capabilities
  * See SDM volume 3, section 24.7.1
  */
 struct capability_info exitctl[11] = 
@@ -118,7 +118,7 @@ struct capability_info exitctl[11] =
 	{ 24, "Conceal VM exits from Intel PT" }
 };
 /*
- * Entry capabilities
+ * Entry Control capabilities
  * See SDM volume 3, section 24.8.1
  */
 struct capability_info entryctl[9] = 
