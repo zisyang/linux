@@ -29,24 +29,25 @@ linux/arch/x86/kvm/vmx/vmx.c
 
 ## output for dmesg
 ```
-[41041.775204] virbr0: port 2(vnet0) entered learning state
-[41043.838718] virbr0: port 2(vnet0) entered forwarding state
-[41043.838726] virbr0: topology change detected, propagating
-[41605.341202] CPUID(0x4FFFFFFF), exits=2578298
-[41609.238802] CPUID(0x4FFFFFFF), exits=2578459
-[41612.056876] CPUID(0x4FFFFFFF), exits=2578563
-[41613.794207] CPUID(0x4FFFFFFE), total time in vmm: 101380739188 cycles
-[41613.794212]  --- (0x4FFFFFFE), registers: ebx=23, ecx=-1698475916
-[41615.049413] CPUID(0x4FFFFFFE), total time in vmm: 101381798623 cycles
-[41615.049418]  --- (0x4FFFFFFE), registers: ebx=23, ecx=-1697416481
-[41615.886688] CPUID(0x4FFFFFFE), total time in vmm: 101382681874 cycles
-[41615.886693]  --- (0x4FFFFFFE), registers: ebx=23, ecx=-1696533230
-[41617.266328] CPUID(0x4FFFFFFE), total time in vmm: 101383608441 cycles
-[41617.266333]  --- (0x4FFFFFFE), registers: ebx=23, ecx=-1695606663
-[41621.934800] CPUID(0x4FFFFFFF), exits=2579008
-[41623.396212] CPUID(0x4FFFFFFE), total time in vmm: 101387010285 cycles
-[41623.396218]  --- (0x4FFFFFFE), registers: ebx=23, ecx=-1692204819
-zy@ubuntu:~/data/git/linux$ 
+[45341.540472] virbr0: port 2(vnet0) entered learning state
+[45343.560415] virbr0: port 2(vnet0) entered forwarding state
+[45343.560421] virbr0: topology change detected, propagating
+[45550.467153] CPUID(0x4FFFFFFF), exits=817346
+[45554.124818] CPUID(0x4FFFFFFF), exits=817458
+[45555.241615] CPUID(0x4FFFFFFF), exits=817533
+[45560.442361] CPUID(0x4FFFFFFE), total time in vmm: 14402591322 cycles
+[45560.442367]  --- (0x4FFFFFFE), registers: ebx=3, ecx=1517689434
+[45562.846337] CPUID(0x4FFFFFFE), total time in vmm: 14403738732 cycles
+[45562.846342]  --- (0x4FFFFFFE), registers: ebx=3, ecx=1518836844
+[45563.564438] CPUID(0x4FFFFFFE), total time in vmm: 14404744237 cycles
+[45563.564443]  --- (0x4FFFFFFE), registers: ebx=3, ecx=1519842349
+[45564.269907] CPUID(0x4FFFFFFE), total time in vmm: 14406351518 cycles
+[45564.269912]  --- (0x4FFFFFFE), registers: ebx=3, ecx=1521449630
+[45596.883873] CPUID(0x4FFFFFFF), exits=818468
+[45598.542785] CPUID(0x4FFFFFFF), exits=818550
+[45600.316000] CPUID(0x4FFFFFFE), total time in vmm: 14417620369 cycles
+[45600.316005]  --- (0x4FFFFFFE), registers: ebx=3, ecx=1532718481
+zy@ubuntu:~/data/git/linux/283_assign2$ 
 ```
 
 ## output from nested VM
@@ -56,31 +57,34 @@ CPU 0:
    vendor_id = "GenuineIntel"
 zy@ub:~$ cpuid -l 0x04fffffff
 CPU 0:
-   0x4fffffff 0x00: eax=0x0027577a ebx=0xffff9d9d ecx=0x00000000 edx=0xffffba6c
+   0x4fffffff 0x00: eax=0x000c78c2 ebx=0xffff9d9d ecx=0x00000000 edx=0xffffba6c
 zy@ub:~$ cpuid -l 0x04fffffff
 CPU 0:
-   0x4fffffff 0x00: eax=0x0027581b ebx=0xffff9d9d ecx=0x00000000 edx=0xffffba6c
+   0x4fffffff 0x00: eax=0x000c7932 ebx=0xffff9d9d ecx=0x00000000 edx=0xffffba6c
 zy@ub:~$ cpuid -l 0x04fffffff
 CPU 0:
-   0x4fffffff 0x00: eax=0x00275883 ebx=0x00000000 ecx=0x00000000 edx=0xffffba6c
+   0x4fffffff 0x00: eax=0x000c797d ebx=0xffff9d9d ecx=0x00000000 edx=0xffffba6c
 zy@ub:~$ cpuid -l 0x04ffffffe
 CPU 0:
-   0x4ffffffe 0x00: eax=0x4ffffffe ebx=0x00000017 ecx=0x9ac35074 edx=0xffffba6c
+   0x4ffffffe 0x00: eax=0x4ffffffe ebx=0x00000003 ecx=0x5a761a5a edx=0xffffba6c
 zy@ub:~$ cpuid -l 0x04ffffffe
 CPU 0:
-   0x4ffffffe 0x00: eax=0x4ffffffe ebx=0x00000017 ecx=0x9ad37adf edx=0xffffba6c
+   0x4ffffffe 0x00: eax=0x4ffffffe ebx=0x00000003 ecx=0x5a879c6c edx=0xffffba6c
 zy@ub:~$ cpuid -l 0x04ffffffe
 CPU 0:
-   0x4ffffffe 0x00: eax=0x4ffffffe ebx=0x00000017 ecx=0x9ae0f512 edx=0xffffba6c
+   0x4ffffffe 0x00: eax=0x4ffffffe ebx=0x00000003 ecx=0x5a96f42d edx=0xffffba6c
 zy@ub:~$ cpuid -l 0x04ffffffe
 CPU 0:
-   0x4ffffffe 0x00: eax=0x4ffffffe ebx=0x00000017 ecx=0x9aef1879 edx=0xffffba6c
+   0x4ffffffe 0x00: eax=0x4ffffffe ebx=0x00000003 ecx=0x5aaf7a9e edx=0xffffba6c
 zy@ub:~$ cpuid -l 0x04fffffff
 CPU 0:
-   0x4fffffff 0x00: eax=0x00275a40 ebx=0xffff9d9d ecx=0x00000000 edx=0xffffba6c
+   0x4fffffff 0x00: eax=0x000c7d24 ebx=0xffff9d9d ecx=0x00000000 edx=0xffffba6c
+zy@ub:~$ cpuid -l 0x04fffffff
+CPU 0:
+   0x4fffffff 0x00: eax=0x000c7d76 ebx=0xffff9d9d ecx=0x00000000 edx=0xffffba6c
 zy@ub:~$ cpuid -l 0x04ffffffe
 CPU 0:
-   0x4ffffffe 0x00: eax=0x4ffffffe ebx=0x00000017 ecx=0x9b2300ed edx=0xffffba6c
+   0x4ffffffe 0x00: eax=0x4ffffffe ebx=0x00000003 ecx=0x5b5b6d91 edx=0xffffba6c
 zy@ub:~$ 
 ```
 12. That's all. Thanks!
