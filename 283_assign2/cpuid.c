@@ -1223,10 +1223,14 @@ bool kvm_cpuid(struct kvm_vcpu *vcpu, u32 *eax, u32 *ebx,
 EXPORT_SYMBOL_GPL(kvm_cpuid);
 
 // 283 assignment 2: 
-// num_exits_all_types: for function __vmx_handle_exit(...) & kvm_emulate_cpuid(..)
+// total_exits_all_types: for function __vmx_handle_exit(...) & kvm_emulate_cpuid(..)
 //  For CPUID leaf node %eax=0x4FFFFFFF:   Return the total number of exits (all types) in %eax
 u32 total_exits_all_types;
 EXPORT_SYMBOL(total_exits_all_types);
+// total_time_spent_proc_exits: for function vmx_handle_exit(...) & kvm_emulate_cpuid(..)
+//  For CPUID leaf node %eax=0x4FFFFFFE:   Return total values are measured in processor cycles across all VCPUs
+u64 total_time_spent_proc_exits;
+EXPORT_SYMBOL(total_time_spent_proc_exits);
 
 
 int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
@@ -1241,14 +1245,17 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 
 	if (eax == 0x4fffffff) {  // leaf node %eax=0x4FFFFFFF:
 		eax = total_exits_all_types; // Return the total number of exits (all types) in %eax
-		printk("CPUID(0x4FFFFFFF), exits=%d\n", total_exits_all_types);
+		printk("CPUID(0x4FFFFFFF), exits=%u\n", total_exits_all_types);
 	} 
 	else if (eax == 0x4ffffffe) { 	//  For CPUID leaf node %eax=0x4FFFFFFE:
 		//	Return the high 32 bits of the total time spent processing all exits in %ebx
 		//	Return the low 32 bits of the total time spent processing all exits in %ecx
 		//	%ebx and %ecx return values are measured in processor cycles, across all VCPUs
-		eax = 1013; // hardcode cycles for testing
-		printk("CPUID(0x4FFFFFFE), total time in vmm: %d cycles\n", eax);
+
+		ebx = (u32) (total_time_spent_proc_exits >> 32);  // high bits
+		ecx = (u32) total_time_spent_proc_exits;   // low bits
+		printk("CPUID(0x4FFFFFFE), total time in vmm: %llu cycles\n", total_time_spent_proc_exits);
+		printk(" --- (0x4FFFFFFE), registers: ebx=%u, ecx=%u\n", ebx, ecx);
 	}
 	else {	
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, false);

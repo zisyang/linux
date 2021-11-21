@@ -5886,7 +5886,7 @@ void dump_vmcs(struct kvm_vcpu *vcpu)
 
 
 // 283 assignment 2: 
-// num_exits_all_types: for function __vmx_handle_exit(...)
+// total_exits_all_types: for function __vmx_handle_exit(...)
 //  For CPUID leaf node %eax=0x4FFFFFFF: Return the total number of exits (all types) in %eax
 extern u32 total_exits_all_types;
 
@@ -5900,7 +5900,7 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 	union vmx_exit_reason exit_reason = vmx->exit_reason;
 	u32 vectoring_info = vmx->idt_vectoring_info;
 	u16 exit_handler_index;
-
+	
 	total_exits_all_types++;
 
 	/*
@@ -6058,9 +6058,20 @@ unexpected_vmexit:
 	return 0;
 }
 
+// 283 assignment 2: 
+// total_time_spent_proc_exits: for function __vmx_handle_exit(...)
+//  For CPUID leaf node %eax=0x4FFFFFFF: Return the total number of exits (all types) in %eax
+extern u64 total_time_spent_proc_exits;
+
 static int vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 {
+	u64 start_tscl = rdtsc();
+	u64 delta_tsc;
+	
 	int ret = __vmx_handle_exit(vcpu, exit_fastpath);
+
+	delta_tsc = rdtsc() - start_tscl; 
+	total_time_spent_proc_exits += delta_tsc;
 
 	/*
 	 * Exit to user space when bus lock detected to inform that there is
