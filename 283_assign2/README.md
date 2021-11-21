@@ -3,13 +3,27 @@
 1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member implemented / researched. (You may skip this question if you are doing the lab by yourself).
 - Ans: all works done by myself. 
 2. Describe in detail the steps you used to complete the assignment. Consider your reader to be someone skilled in software development but otherwise unfamiliar with the assignment. Good answers to this question will be recipes that someone can follow to reproduce your development steps.
-- Ans: Steps shown in [How to run].
+- Ans: Steps shown under [How to run] below.
 3. for this assignment, I chose CPUID 0x4FFFFFFF & 0x4FFFFFFE, Question 3 & 4 will be skipped for this time.
 4. skip as above.
 
 # How to run
-1. 
-2.
+1. Clone my linux repository by using below command:
+```
+$ git clone https://github.com/zisyang/linux.git
+```
+2. Build the kernel from the first assignment 1, verify the kernel version is below: 
+```
+Linux ubuntu 5.15.0-rc7 #1 SMP Sat Oct 30 17:31:38 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+```
+3. Modify the code for CPUID leaf node in below files:
+```
+linux/arch/x86/kvm/cpuid.c
+```
+```
+linux/arch/x86/kvm/vmx/vmx.c
+```
+
 
 
 
