@@ -6071,7 +6071,7 @@ static int vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 	int ret = __vmx_handle_exit(vcpu, exit_fastpath);
 
 	delta_tsc = rdtsc() - start_tscl;  // calcuate the delta time after process the exit 
-	total_time_spent_proc_exits += delta_tsc;  // accumulate the delta time to total time
+	total_time_spent_proc_exits += delta_tsc;  // accumulate the delta time to total time spent
 
 	/*
 	 * Exit to user space when bus lock detected to inform that there is
