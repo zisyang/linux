@@ -6065,13 +6065,13 @@ extern u64 total_time_spent_proc_exits;
 
 static int vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 {
-	u64 start_tscl = rdtsc();
+	u64 start_tscl = rdtsc(); // record the start time
 	u64 delta_tsc;
 	
 	int ret = __vmx_handle_exit(vcpu, exit_fastpath);
 
-	delta_tsc = rdtsc() - start_tscl; 
-	total_time_spent_proc_exits += delta_tsc;
+	delta_tsc = rdtsc() - start_tscl;  // calcuate the delta time after process the exit 
+	total_time_spent_proc_exits += delta_tsc;  // accumulate the delta time to total time
 
 	/*
 	 * Exit to user space when bus lock detected to inform that there is
