@@ -1,20 +1,20 @@
-##### CMPE 283 Assignment - 2
+# CMPE 283 Assignment - 2
 
-# Zi Shun Yang(007562568):
+## Zi Shun Yang(007562568):
 * Setup to create a nested VM for the program to execute
 * Built the linux kernel 
 * Made code modifications on cpuid.c file
 * Debugged and performed the required changes to fix the errors which occurred while compiling the code
 * Created Documentation
 
-# Rohan Patel(010745904):
+## Rohan Patel(010745904):
 * Helped build the kernel and debugged errors while building the linux kernel 
 * Made code modifications on vmx.c file
 * Figured out how to perform tests for kernel
 * Updated Documentation
 * Error handling while performing the compilation
 
-## Steps executed to complete the assignment:
+### Steps executed to complete the assignment:
   * In cpuid.c file, 
     1. add two global variables: 
        * total_exits_all_types: to calculate the total number of exits (all types);
@@ -33,7 +33,7 @@
 3. for this assignment, CPUID 0x4FFFFFFF & 0x4FFFFFFE, have been chosen. Question 3 & 4 will be skipped for this time.
 4. skip as #3.
 
-###### Steps to follow:
+## Steps to follow:
 
 1. Clone the repository:
 ```
