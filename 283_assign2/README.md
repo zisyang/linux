@@ -40,7 +40,7 @@
 $ git clone https://github.com/zisyang/linux.git
 ```
 2. Build the linux kernel 
-3. verify the kernel version is below: 
+3. Verify the kernel version is below: 
 ```
 Linux ubuntu 5.15.0-rc7 #1 SMP Sat Oct 30 17:31:38 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
 ```
