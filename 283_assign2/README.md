@@ -1,11 +1,27 @@
 # CMPE 283 Assignment 2
 ## Questions to be answered
 1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member implemented / researched. (You may skip this question if you are doing the lab by yourself).
-- Ans: all works done by myself. 
+- Contribution: 
+
 2. Describe in detail the steps you used to complete the assignment. Consider your reader to be someone skilled in software development but otherwise unfamiliar with the assignment. Good answers to this question will be recipes that someone can follow to reproduce your development steps.
-- Ans: Steps shown under [How to run] below.
-3. for this assignment, I chose CPUID 0x4FFFFFFF & 0x4FFFFFFE, Question 3 & 4 will be skipped for this time.
-4. skip as above.
+- Steps to complete the assignment:
+  * In cpuid.c file, 
+    1. add two global variables: 
+       * total_exits_all_types: to calculate the total number of exits (all types);
+       * total_time_spent_proc_exits: to count the total values are measured in processor cycles across all VCPUs;
+     1. modify the function kvm_emulate_cpuid(...) to report back the information when below CPUID leaf nodes code in EAX are met:
+       * read the number of total exits for all types while EAX is 0x4FFFFFFF;
+       * read the number of total time spent processing all exits while EAX is 0x4FFFFFFE;
+  * In vmx.c file, 
+    1. declare two global variables from external: 
+       * total_exits_all_types: counter to count how many time the exit handler got called; 
+       * total_time_spent_proc_exits: calculate the total processing time of __vmx_handle_exit;
+    2. modify the function __vmx_handle_exit(...) to increase the exit counter total_exits_all_types;
+    3. modify the funciton vmx_handle_exit(...) to accumulate the processing time of each exit to variable total_time_spent_proc_exits;
+  * please refer to [How to run] below.
+  
+3. for this assignment, CPUID 0x4FFFFFFF & 0x4FFFFFFE, have been chosen. Question 3 & 4 will be skipped for this time.
+4. skip as #3.
 
 # How to run
 1. Clone my linux repository by using below command:
@@ -16,15 +32,107 @@ $ git clone https://github.com/zisyang/linux.git
 ```
 Linux ubuntu 5.15.0-rc7 #1 SMP Sat Oct 30 17:31:38 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
 ```
-3. Modify the code for CPUID leaf node in below files:
+3. Modify the code for CPUID leaf node in below files or copy the files from this repository:
 ```
 linux/arch/x86/kvm/cpuid.c
 ```
 ```
 linux/arch/x86/kvm/vmx/vmx.c
 ```
+4. Rebuild the module
+```
+make modules
+sudo make INSTALL_MOD_STRIP=1 modules_install 
+```
+5. check if the old kvm modules loaded, if so, then remove it.
+```
+lsmod | grep kvm 
+sudo rmmod kvm_intel kvm ## unload the old module
+```
+6. insert the new built module
+```
+sudo modprobe kvm_intel
+lsmod | grep kvm ## check if new one loaded
+```
+7. Install KVM packages by following the guide (URL: https://phoenixnap.com/kb/ubuntu-install-kvm)
+```
+# Check Virtualization Support on Ubuntu 20.04
+sudo apt install cpu-checker
+sudo kvm-ok 
 
+# Install KVM packages
+sudo apt update 
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
 
+# Authorize users
+sudo adduser [username] libvirt
+sudo adduser [username] kvm
+
+# Verify the Installation
+virsh list --all
+sudo systemctl status libvirtd # check if it's running good, then press Q to quit the status screen
+sudo systemctl enable --now libvirtd
+
+# Prepare creating nested VM
+sudo apt install virt-manager
+```
+8. Create a nested VM
+```
+# method 1: with GUI
+sudo virt-manager
+```
+```
+# method 2: without GUI
+sudo virt-install \
+--name=Ubtest1 \
+--description='Ubuntu 18.04' \
+--ram=1536 \
+--vcpus=1 \
+--disk pool=default,size=20,bus=virtio,format=qcow2 \
+--os-type linux \
+--os-variant ubuntu18.04 \
+--network network:default \
+--graphics none \
+--console pty,target_type=serial \
+--location 'http://gb.archive.ubuntu.com/ubuntu/dists/bionic/main/installer-amd64/' \
+--extra-args 'console=ttyS0,115200n8 serial'  \
+--force 
+# during install, remember to install OpenSSH package when prompt
+# after successfully install, press Ctrl+Shift+] or open up a new ternmial to restart the nested VM
+```
+
+9. Restart the nested VM, and get the IP to access it
+```
+# a. restart
+virsh destroy Ubtest1
+virsh start Ubtest1
+
+# b. get MAC address
+virsh domiflist Ubtest1 
+
+# c. get IP address
+arp -an | grep <MAC> ## <MAC> is the result from b.
+
+# d. ssh into it
+ssh <user>@<IP> ## <user> is user created during installation, <IP> is the result from c.
+```
+
+10. Install CPUID package inside the nested VM
+```
+sudo apt install cpuid
+```
+
+11. run the test using cpuid package
+```
+# test with leaf node 0 check if cpuid installed good
+cpuid -l 0x0 
+
+# test for how many total exits
+cpuid -l 0x4fffffff 
+
+# test for how many total time spent for processing exits
+cpuid -l 0x4ffffffe 
+```
 
 
 ## output for dmesg
