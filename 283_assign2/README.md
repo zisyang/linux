@@ -39,33 +39,34 @@
 ```
 $ git clone https://github.com/zisyang/linux.git
 ```
-2. Build the kernel from the first assignment 1, verify the kernel version is below: 
+2. Build the linux kernel 
+3. verify the kernel version is below: 
 ```
 Linux ubuntu 5.15.0-rc7 #1 SMP Sat Oct 30 17:31:38 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
 ```
-3. Modify the code for CPUID leaf node in below files or download and use the files from this repository:
+4. Modify the code for CPUID leaf node in below files or download and use the files from this repository:
 ```
 linux/arch/x86/kvm/cpuid.c
 ```
 ```
 linux/arch/x86/kvm/vmx/vmx.c
 ```
-4. Rebuild the module
+5. Rebuild the module
 ```
 make modules
 sudo make INSTALL_MOD_STRIP=1 modules_install 
 ```
-5. Verify if the old kvm modules loaded, if so, then remove it.
+6. Verify if the old kvm modules loaded, if so, then remove it.
 ```
 lsmod | grep kvm 
 sudo rmmod kvm_intel kvm ## unload the old module
 ```
-6. Insert the new built module
+7. Insert the new built module
 ```
 sudo modprobe kvm_intel
 lsmod | grep kvm ## check if new one loaded
 ```
-7. Install KVM packages by following the guide (URL: https://phoenixnap.com/kb/ubuntu-install-kvm)
+8. Install KVM packages by following the guide (URL: https://phoenixnap.com/kb/ubuntu-install-kvm)
 ```
 # Check Virtualization Support on Ubuntu 20.04
 sudo apt install cpu-checker
@@ -87,7 +88,7 @@ sudo systemctl enable --now libvirtd
 # Prepare creating nested VM
 sudo apt install virt-manager
 ```
-8. Create a nested VM
+9. Create a nested VM
 ```
 # method 1: with GUI
 sudo virt-manager
@@ -112,7 +113,7 @@ sudo virt-install \
 # after successfully install, press [Ctrl+Shift+] or open up a new ternmial to restart the nested VM
 ```
 
-9. Restart the nested VM, and get the IP to access it
+10. Restart the nested VM, and get the IP to access it
 ```
 # a. restart
 virsh destroy Ubtest1
@@ -128,12 +129,12 @@ arp -an | grep <MAC> ## <MAC> is the result from b.
 ssh <user>@<IP> ## <user> is user created during installation, <IP> is the result from c.
 ```
 
-10. Install CPUID package inside the nested VM
+11. Install CPUID package inside the nested VM
 ```
 sudo apt install cpuid
 ```
 
-11. run the test using cpuid package
+12. run the test using cpuid package
 ```
 # test with leaf node 0 check if cpuid installed good
 cpuid -l 0x0 
