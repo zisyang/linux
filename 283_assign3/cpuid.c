@@ -1290,41 +1290,21 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 			printk(" --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=%u, ebx=%u, ecx=%u, edx=%u\n", eax, ebx, ecx, edx);
         }
         else {
-            if (eax == 0x4ffffffd) {
-                // eax = exits_per_reason[(int)ecx]; || eax = exits_per_reason[ecx]; 
-                // ------------------------- OR using ATOMIC variables -------------------------
-                // eax = atomic_read(&exits_per_reason[ecx]);
+            if (eax == 0x4ffffffd) { // For CPUID leaf node %eax=0x4FFFFFFD:
+				// Return the number of exits for the exit number provided (on input) in %ecx 
+				//   This value should be returned in %eax
 				eax = exits_per_reason[ecx];
-                // ebx = 0x0;
-                // ecx = 0x0;
-                // edx = 0x0;
-                // print 0x4FFFFFFD message
 				printk("CPUID(0x4FFFFFFD), exit number %u exits=%u\n", ecx, eax);
-                // for (i = 0; i < 70; i++) {
-                    // print messsaage code below
-                    // printk("CPUID(0x4FFFFFFD) exits_per_reason[i]));
-                    // printk("exits for %d is %u", i, exits_per_reason[i]));
-                    // "Exit number %d handled %d times\n", i, atomic_read(&exits_per_reason[i]));
-                // }
-            } else if (eax == 0x4ffffffc) {
-                // using ATOMIC variables
-                // exit_cycles_per_reason = atomic64_read(&total_time_spent_per_reason[ecx]);
-                // ebx = (exit_cycles_per_reason >> 32);
-				// ecx = (exit_cycles_per_reason & 0xFFFFFFFF);
-				// edx = 0x0; 
-                // ------------------------------------------- OR -------------------------------------------
+            } 
+			else if (eax == 0x4ffffffc) { // For CPUID leaf node %eax=0x4FFFFFFC:
+				// Return the time spent processing the exit number provided (on input) in %ecx
+				//   Return the high 32 bits of the total time spent for that exit in %ebx
+				//   Return the low 32 bits of the total time spent for that exit in %ecx
 				input_exit_number = ecx;
                 ebx = (u32) (total_time_spent_per_reason[input_exit_number] >> 32);  // high bits
                 ecx = (u32) total_time_spent_per_reason[input_exit_number];   // low bits
-                // edx = 0x0;
-                // print 0x4FFFFFFC message 
 				printk("CPUID(0x4FFFFFFC), exit number %u time in vmm: %llu cycles\n", input_exit_number, total_time_spent_per_reason[input_exit_number]);
 				printk(" --- (0x4FFFFFFC), registers: ebx=%u, ecx=%u\n", ebx, ecx);
-                // for(i = 0; i < 70; i++) {
-                    // print messsage code below
-                    // printk("CPUID(0x4FFFFFFC) total time spent per reasaon: %llu cycles\n",  total_time_spent_per_reason[i]);
-                    // "Exit number %d spent %lli CPU cycles\n", i, atomic64_read(&total_time_spent_per_reason[i]));
-                // }
             }
         }
     }
