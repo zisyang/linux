@@ -192,18 +192,19 @@ mv a.out test_assignment3
 
 # test w/o parameter
 ./test_assignment3 
-CPUID(0x4FFFFFFF), exits=2286878
-CPUID(0x4FFFFFFE), total time in vmm: 30553290010 cycles
 
 # test for certain type of exit reason
 ./test_assignment3 0
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 0 exits=6741
-CPUID(0x4FFFFFFC), exit number 0 time in vmm: 1026320488 cycles
+./test_assignment3 1
+./test_assignment3 2
 ```
 
 
-## Output for dmesg from host VM:
+## Output from nested VM:
 ```
+zy@ub:~$ ./test_assignment3 
+CPUID(0x4FFFFFFF), exits=2286878
+CPUID(0x4FFFFFFE), total time in vmm: 30553290010 cycles
 zy@ub:~$ ./test_assignment3 0
 CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 0 exits=6741
 CPUID(0x4FFFFFFC), exit number 0 time in vmm: 1026320488 cycles
