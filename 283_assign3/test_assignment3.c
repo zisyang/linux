@@ -20,10 +20,19 @@ __cpuid(unsigned int *eax, unsigned int *ebx, unsigned int *ecx,
 int main(int argc, char **argv)
 {
     unsigned int eax, ebx, ecx, edx, input_exit;
-    unsigned long long exits_per_exit, cycles_per_exit;
+    unsigned long long cycles_all_exit, exits_per_exit, cycles_per_exit;
 
     if (argc<2) {
-        printf("Usage: %s [number]\n", *argv);    
+
+        eax = 0x4fffffff;
+        __cpuid(&eax, &ebx, &ecx, &edx);       
+        printf("CPUID(0x4FFFFFFF), exits=%u\n", eax);
+
+        eax = 0x4ffffffe;
+        __cpuid(&eax, &ebx, &ecx, &edx);       
+        cycles_all_exit = (unsigned long long) ebx << 32 | ecx;
+        printf("CPUID(0x4FFFFFFE), total time in vmm: %llu cycles\n", cycles_all_exit);
+
     }
     else {
         input_exit = atoi(*(argv+1));

@@ -1,6 +1,6 @@
-zy@ub:~$ cpuid -l 0x4fffffff 
-CPU 0:
-   0x4fffffff 0x00: eax=0x001761e0 ebx=0xff49d4ea ecx=0x00000000 edx=0xffff9130
+zy@ub:~$ ./test_assignment3 
+CPUID(0x4FFFFFFF), exits=1532384
+...
 ## exits=1532384 after inital boot
 
 #1st run
@@ -663,7 +663,7 @@ CPUID(0x4FFFFFFD), exit number 68 exits=0
 CPUID(0x4FFFFFFC), exit number 68 time in vmm: 0 cycles
 CPUID(0x4FFFFFFD), exit type 69 not enabled in KVM
 
-zy@ub:~$ cpuid -l 0x4fffffff
-CPU 0:
-   0x4fffffff 0x00: eax=0x0017892f ebx=0xff49d4ea ecx=0x00000000 edx=0xffff9130
+zy@ub:~$ ./test_assignment3 
+CPUID(0x4FFFFFFF), exits=1542447
+...
 ## total exits=1542447 after those test runs

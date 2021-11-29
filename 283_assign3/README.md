@@ -190,9 +190,10 @@ sudo apt install cpuid
 gcc test_assignment3.c
 mv a.out test_assignment3
 
-# show usage
+# test w/o parameter
 ./test_assignment3 
-Usage: ./test_assignment3 [number]
+CPUID(0x4FFFFFFF), exits=2286878
+CPUID(0x4FFFFFFE), total time in vmm: 30553290010 cycles
 
 # test for certain type of exit reason
 ./test_assignment3 0
