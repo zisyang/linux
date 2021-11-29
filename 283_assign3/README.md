@@ -141,6 +141,7 @@ cpuid -l 0x0
 
 # test for how many times exit reason 0 is handled
 cpuid -l 0x4FFFFFFD -s 0
+
 # test for how much total time spent for processing exit reason 0
 cpuid -l 0x4FFFFFFC -s 0
 ```
