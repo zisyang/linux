@@ -1245,8 +1245,7 @@ EXPORT_SYMBOL(total_time_spent_per_reason);
 int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 {
 	u32 eax, ebx, ecx, edx;
-  	uint8_t i;
-    // uint64_t exit_cycles_per_reason;
+  	u32 input_exit_number;
     
 	if (cpuid_fault_enabled(vcpu) && !kvm_require_cpl(vcpu, 0))
 		return 1;
@@ -1268,41 +1267,45 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 		printk("CPUID(0x4FFFFFFE), total time in vmm: %llu cycles\n", total_time_spent_proc_exits);
 		printk(" --- (0x4FFFFFFE), registers: ebx=%u, ecx=%u\n", ebx, ecx);
 	}
-    else if (eax == 0x4ffffffd || eax == 0x4ffffffc) {
-        // exit reason not present in SDM
+    else if (eax == 0x4ffffffd || eax == 0x4ffffffc) { // For leaf nodes 0x4FFFFFFD and 0x4FFFFFFC,
+        // exit reason not present in SDM v3 Appendix.C
         if (ecx < 0 || ecx == 35 || ecx == 38 || ecx == 42 || ecx == 65 || ecx > 69) {
-			// if %ecx (on input) contains a value not defined by the SDM, 
+			// if %ecx (on input) contains a value not defined by the SDM v3 Appendix.C, 
 			//   return 0 in all %eax, %ebx, %ecx registers and return 0xFFFFFFFF in %edx
+			printk("CPUID(0x4FFFFFFD|0x4FFFFFFC), value %u not defined by the SDM", ecx);
             eax = 0x0;
-            ebc = 0x0;
+            ebx = 0x0;
             ecx = 0x0;
             edx = 0xffffffff;
+			printk(" --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=%u, ebx=%u, ecx=%u, edx=%u\n", eax, ebx, ecx, edx);
         }
         // exit reason defined in SDM, but not enabled in KVM
-        else if (ecx == 5 || ecx == 6 || ecx == 11 || ecx == 16 || ecx == 17 || ecx == 63 || ecx == 64 || ecx == 66 || ecx == 69) {
+        else if (ecx == 4 || ecx == 5 || ecx == 6 || ecx == 11 || ecx == 17 || ecx == 66 || ecx == 69) {
 			// For exit types not enabled in KVM, return 0s in all four registers.
+			printk("CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type %u not enabled in KVM", ecx);
             eax = 0x0;
-            ebc = 0x0;
+            ebx = 0x0;
             ecx = 0x0;
             edx = 0x0;
+			printk(" --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=%u, ebx=%u, ecx=%u, edx=%u\n", eax, ebx, ecx, edx);
         }
         else {
             if (eax == 0x4ffffffd) {
                 // eax = exits_per_reason[(int)ecx]; || eax = exits_per_reason[ecx]; 
                 // ------------------------- OR using ATOMIC variables -------------------------
                 // eax = atomic_read(&exits_per_reason[ecx]);
-
-                ebx = 0x0;
-                ecx = 0x0;
-                edx = 0x0;
+				eax = exits_per_reason[ecx];
+                // ebx = 0x0;
+                // ecx = 0x0;
+                // edx = 0x0;
                 // print 0x4FFFFFFD message
-                // printk("--- (0x4FFFFFFD) ---");
-                for (i = 0; i < 70, i++) {
+				printk("CPUID(0x4FFFFFFD), exit number %u exits=%u\n", ecx, eax);
+                // for (i = 0; i < 70; i++) {
                     // print messsaage code below
                     // printk("CPUID(0x4FFFFFFD) exits_per_reason[i]));
                     // printk("exits for %d is %u", i, exits_per_reason[i]));
                     // "Exit number %d handled %d times\n", i, atomic_read(&exits_per_reason[i]));
-                }
+                // }
             } else if (eax == 0x4ffffffc) {
                 // using ATOMIC variables
                 // exit_cycles_per_reason = atomic64_read(&total_time_spent_per_reason[ecx]);
@@ -1310,17 +1313,18 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 				// ecx = (exit_cycles_per_reason & 0xFFFFFFFF);
 				// edx = 0x0; 
                 // ------------------------------------------- OR -------------------------------------------
-
-                ebx = (u32) (total_time_spent_per_reason >> 32);  // high bits
-                ecx = (u32) total_time_spent_per_reason;   // low bits
-                edx = 0x0;
+				input_exit_number = ecx;
+                ebx = (u32) (total_time_spent_per_reason[input_exit_number] >> 32);  // high bits
+                ecx = (u32) total_time_spent_per_reason[input_exit_number];   // low bits
+                // edx = 0x0;
                 // print 0x4FFFFFFC message 
-                // printk("--- (0x4FFFFFFC) ---");
-                for(i = 0; i < 70; i++) {
+				printk("CPUID(0x4FFFFFFC), exit number %u time in vmm: %llu cycles\n", input_exit_number, total_time_spent_per_reason[input_exit_number]);
+				printk(" --- (0x4FFFFFFC), registers: ebx=%u, ecx=%u\n", ebx, ecx);
+                // for(i = 0; i < 70; i++) {
                     // print messsage code below
                     // printk("CPUID(0x4FFFFFFC) total time spent per reasaon: %llu cycles\n",  total_time_spent_per_reason[i]);
                     // "Exit number %d spent %lli CPU cycles\n", i, atomic64_read(&total_time_spent_per_reason[i]));
-                }
+                // }
             }
         }
     }

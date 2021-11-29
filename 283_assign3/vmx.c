@@ -5895,7 +5895,6 @@ extern u32 total_exits_all_types;
 //  For CPUID leaf node %eax=0x4FFFFFFD:   Return the number of exits for the exit number provided (on input) in %ecx
 extern u32 exits_per_reason[70]; // atomic_t exits_per_reason[70];
 
-
 /*
  * The guest has exited.  See if we can fix it or if we need userspace
  * assistance.
@@ -6081,11 +6080,13 @@ static int vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 {
 	u64 start_tscl = rdtsc(); // record the start time
 	u64 delta_tsc;
+	u32 exit_reason_basic = to_vmx(vcpu)->exit_reason.basic; // extract exit reason from vcpu
 	
 	int ret = __vmx_handle_exit(vcpu, exit_fastpath);
 
 	delta_tsc = rdtsc() - start_tscl;  // calcuate the delta time after process the exit 
 	total_time_spent_proc_exits += delta_tsc;  // accumulate the delta time to total time spent
+	total_time_spent_per_reason[exit_reason_basic] += delta_tsc; //add the delta time to cycle counter for specific exit reason 
 
 	/*
 	 * Exit to user space when bus lock detected to inform that there is
