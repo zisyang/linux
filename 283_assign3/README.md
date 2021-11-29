@@ -28,7 +28,7 @@
     3. modify the funciton vmx_handle_exit(...) to accumulate the processing time of each exit reason to variable total_time_spent_per_reason[exit_reason_basic];
   * please refer to [Steps to follow].
 
-### Question 3 ~ Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations?
+### Question 3 ~ Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
 - 
 
 ### Question 4 ~ Of the exit types defined in the SDM, which are the most frequent? Least?
