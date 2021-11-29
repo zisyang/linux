@@ -43,7 +43,7 @@ int main(int argc, char **argv)
         else {
             exits_per_exit = eax;
 
-            printf("CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number %u exits=%llu\n", input_exit, exits_per_exit);
+            printf("CPUID(0x4FFFFFFD), exit number %u exits=%llu\n", input_exit, exits_per_exit);
 
             eax = 0x4ffffffc;
             ecx = input_exit;

@@ -1,799 +1,669 @@
+zy@ub:~$ cpuid -l 0x4fffffff 
+CPU 0:
+   0x4fffffff 0x00: eax=0x001761e0 ebx=0xff49d4ea ecx=0x00000000 edx=0xffff9130
+## exits=1532384 after inital boot
+
 #1st run
 zy@ub:~$ for i in {0..69}; do ./test_assignment3 $i; done
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 0 exits=6741
-CPUID(0x4FFFFFFC), exit number 0 time in vmm: 1026320488 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 1 exits=8835
-CPUID(0x4FFFFFFC), exit number 1 time in vmm: 1180963 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 2 exits=0
+CPUID(0x4FFFFFFD), exit number 0 exits=13482
+CPUID(0x4FFFFFFC), exit number 0 time in vmm: 2156114629 cycles
+CPUID(0x4FFFFFFD), exit number 1 exits=18584
+CPUID(0x4FFFFFFC), exit number 1 time in vmm: 2463769 cycles
+CPUID(0x4FFFFFFD), exit number 2 exits=0
 CPUID(0x4FFFFFFC), exit number 2 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 3 exits=0
+CPUID(0x4FFFFFFD), exit number 3 exits=0
 CPUID(0x4FFFFFFC), exit number 3 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 4 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 5 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 6 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 7 exits=900
-CPUID(0x4FFFFFFC), exit number 7 time in vmm: 2032646 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 8 exits=0
+CPUID(0x4FFFFFFD), exit type 4 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 5 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 6 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 7 exits=2445
+CPUID(0x4FFFFFFC), exit number 7 time in vmm: 5632955 cycles
+CPUID(0x4FFFFFFD), exit number 8 exits=0
 CPUID(0x4FFFFFFC), exit number 8 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 9 exits=0
+CPUID(0x4FFFFFFD), exit number 9 exits=0
 CPUID(0x4FFFFFFC), exit number 9 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 10 exits=91367
-CPUID(0x4FFFFFFC), exit number 10 time in vmm: 680948427 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 11 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 12 exits=2930
-CPUID(0x4FFFFFFC), exit number 12 time in vmm: 35141095 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 13 exits=0
+CPUID(0x4FFFFFFD), exit number 10 exits=192356
+CPUID(0x4FFFFFFC), exit number 10 time in vmm: 1555064373 cycles
+CPUID(0x4FFFFFFD), exit type 11 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 12 exits=17406
+CPUID(0x4FFFFFFC), exit number 12 time in vmm: 208984209 cycles
+CPUID(0x4FFFFFFD), exit number 13 exits=0
 CPUID(0x4FFFFFFC), exit number 13 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 14 exits=0
+CPUID(0x4FFFFFFD), exit number 14 exits=0
 CPUID(0x4FFFFFFC), exit number 14 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 15 exits=0
+CPUID(0x4FFFFFFD), exit number 15 exits=0
 CPUID(0x4FFFFFFC), exit number 15 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 16 exits=0
+CPUID(0x4FFFFFFD), exit number 16 exits=0
 CPUID(0x4FFFFFFC), exit number 16 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 17 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 18 exits=0
+CPUID(0x4FFFFFFD), exit type 17 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 18 exits=0
 CPUID(0x4FFFFFFC), exit number 18 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 19 exits=0
+CPUID(0x4FFFFFFD), exit number 19 exits=0
 CPUID(0x4FFFFFFC), exit number 19 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 20 exits=0
+CPUID(0x4FFFFFFD), exit number 20 exits=0
 CPUID(0x4FFFFFFC), exit number 20 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 21 exits=0
+CPUID(0x4FFFFFFD), exit number 21 exits=0
 CPUID(0x4FFFFFFC), exit number 21 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 22 exits=0
+CPUID(0x4FFFFFFD), exit number 22 exits=0
 CPUID(0x4FFFFFFC), exit number 22 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 23 exits=0
+CPUID(0x4FFFFFFD), exit number 23 exits=0
 CPUID(0x4FFFFFFC), exit number 23 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 24 exits=0
+CPUID(0x4FFFFFFD), exit number 24 exits=0
 CPUID(0x4FFFFFFC), exit number 24 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 25 exits=0
+CPUID(0x4FFFFFFD), exit number 25 exits=0
 CPUID(0x4FFFFFFC), exit number 25 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 26 exits=0
+CPUID(0x4FFFFFFD), exit number 26 exits=0
 CPUID(0x4FFFFFFC), exit number 26 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 27 exits=0
+CPUID(0x4FFFFFFD), exit number 27 exits=0
 CPUID(0x4FFFFFFC), exit number 27 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 28 exits=14719
-CPUID(0x4FFFFFFC), exit number 28 time in vmm: 274708521 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 29 exits=2
-CPUID(0x4FFFFFFC), exit number 29 time in vmm: 65938 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 30 exits=175725
-CPUID(0x4FFFFFFC), exit number 30 time in vmm: 1148694210 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 31 exits=362
-CPUID(0x4FFFFFFC), exit number 31 time in vmm: 3348802 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 32 exits=6172
-CPUID(0x4FFFFFFC), exit number 32 time in vmm: 110870189 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 33 exits=0
+CPUID(0x4FFFFFFD), exit number 28 exits=29493
+CPUID(0x4FFFFFFC), exit number 28 time in vmm: 532156788 cycles
+CPUID(0x4FFFFFFD), exit number 29 exits=3
+CPUID(0x4FFFFFFC), exit number 29 time in vmm: 102710 cycles
+CPUID(0x4FFFFFFD), exit number 30 exits=352023
+CPUID(0x4FFFFFFC), exit number 30 time in vmm: 2423599266 cycles
+CPUID(0x4FFFFFFD), exit number 31 exits=3520
+CPUID(0x4FFFFFFC), exit number 31 time in vmm: 34264138 cycles
+CPUID(0x4FFFFFFD), exit number 32 exits=39462
+CPUID(0x4FFFFFFC), exit number 32 time in vmm: 524253611 cycles
+CPUID(0x4FFFFFFD), exit number 33 exits=0
 CPUID(0x4FFFFFFC), exit number 33 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 34 exits=0
+CPUID(0x4FFFFFFD), exit number 34 exits=0
 CPUID(0x4FFFFFFC), exit number 34 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 35 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 36 exits=0
+CPUID(0x4FFFFFFD), value 35 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 36 exits=0
 CPUID(0x4FFFFFFC), exit number 36 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 37 exits=0
+CPUID(0x4FFFFFFD), exit number 37 exits=0
 CPUID(0x4FFFFFFC), exit number 37 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 38 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 39 exits=0
+CPUID(0x4FFFFFFD), value 38 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 39 exits=0
 CPUID(0x4FFFFFFC), exit number 39 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 40 exits=64
-CPUID(0x4FFFFFFC), exit number 40 time in vmm: 525602 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 41 exits=0
+CPUID(0x4FFFFFFD), exit number 40 exits=93
+CPUID(0x4FFFFFFC), exit number 40 time in vmm: 782883 cycles
+CPUID(0x4FFFFFFD), exit number 41 exits=0
 CPUID(0x4FFFFFFC), exit number 41 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 42 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 43 exits=0
+CPUID(0x4FFFFFFD), value 42 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 43 exits=0
 CPUID(0x4FFFFFFC), exit number 43 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 44 exits=0
+CPUID(0x4FFFFFFD), exit number 44 exits=0
 CPUID(0x4FFFFFFC), exit number 44 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 45 exits=0
+CPUID(0x4FFFFFFD), exit number 45 exits=0
 CPUID(0x4FFFFFFC), exit number 45 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 46 exits=0
+CPUID(0x4FFFFFFD), exit number 46 exits=0
 CPUID(0x4FFFFFFC), exit number 46 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 47 exits=0
+CPUID(0x4FFFFFFD), exit number 47 exits=0
 CPUID(0x4FFFFFFC), exit number 47 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 48 exits=457099
-CPUID(0x4FFFFFFC), exit number 48 time in vmm: 7266474210 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 49 exits=6668
-CPUID(0x4FFFFFFC), exit number 49 time in vmm: 208855532 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 50 exits=0
+CPUID(0x4FFFFFFD), exit number 48 exits=848889
+CPUID(0x4FFFFFFC), exit number 48 time in vmm: 13121400215 cycles
+CPUID(0x4FFFFFFD), exit number 49 exits=16867
+CPUID(0x4FFFFFFC), exit number 49 time in vmm: 540129159 cycles
+CPUID(0x4FFFFFFD), exit number 50 exits=0
 CPUID(0x4FFFFFFC), exit number 50 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 51 exits=0
+CPUID(0x4FFFFFFD), exit number 51 exits=0
 CPUID(0x4FFFFFFC), exit number 51 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 52 exits=0
+CPUID(0x4FFFFFFD), exit number 52 exits=0
 CPUID(0x4FFFFFFC), exit number 52 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 53 exits=0
+CPUID(0x4FFFFFFD), exit number 53 exits=0
 CPUID(0x4FFFFFFC), exit number 53 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 54 exits=6
-CPUID(0x4FFFFFFC), exit number 54 time in vmm: 47457 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 55 exits=2
-CPUID(0x4FFFFFFC), exit number 55 time in vmm: 25647 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 56 exits=0
+CPUID(0x4FFFFFFD), exit number 54 exits=12
+CPUID(0x4FFFFFFC), exit number 54 time in vmm: 99668 cycles
+CPUID(0x4FFFFFFD), exit number 55 exits=4
+CPUID(0x4FFFFFFC), exit number 55 time in vmm: 52975 cycles
+CPUID(0x4FFFFFFD), exit number 56 exits=0
 CPUID(0x4FFFFFFC), exit number 56 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 57 exits=0
+CPUID(0x4FFFFFFD), exit number 57 exits=0
 CPUID(0x4FFFFFFC), exit number 57 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 58 exits=0
+CPUID(0x4FFFFFFD), exit number 58 exits=0
 CPUID(0x4FFFFFFC), exit number 58 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 59 exits=0
+CPUID(0x4FFFFFFD), exit number 59 exits=0
 CPUID(0x4FFFFFFC), exit number 59 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 60 exits=0
+CPUID(0x4FFFFFFD), exit number 60 exits=0
 CPUID(0x4FFFFFFC), exit number 60 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 61 exits=0
+CPUID(0x4FFFFFFD), exit number 61 exits=0
 CPUID(0x4FFFFFFC), exit number 61 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 62 exits=0
+CPUID(0x4FFFFFFD), exit number 62 exits=0
 CPUID(0x4FFFFFFC), exit number 62 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 63 exits=0
+CPUID(0x4FFFFFFD), exit number 63 exits=0
 CPUID(0x4FFFFFFC), exit number 63 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 64 exits=0
+CPUID(0x4FFFFFFD), exit number 64 exits=0
 CPUID(0x4FFFFFFC), exit number 64 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 65 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 66 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 67 exits=0
+CPUID(0x4FFFFFFD), value 65 not defined by the SDM
+CPUID(0x4FFFFFFD), exit type 66 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 67 exits=0
 CPUID(0x4FFFFFFC), exit number 67 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 68 exits=0
+CPUID(0x4FFFFFFD), exit number 68 exits=0
 CPUID(0x4FFFFFFC), exit number 68 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 69 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 69 not enabled in KVM
 
 #2nd run
 zy@ub:~$ for i in {0..69}; do ./test_assignment3 $i; done
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 0 exits=6741
-CPUID(0x4FFFFFFC), exit number 0 time in vmm: 1026320488 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 1 exits=9210
-CPUID(0x4FFFFFFC), exit number 1 time in vmm: 1223916 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 2 exits=0
+CPUID(0x4FFFFFFD), exit number 0 exits=13482
+CPUID(0x4FFFFFFC), exit number 0 time in vmm: 2156114629 cycles
+CPUID(0x4FFFFFFD), exit number 1 exits=18883
+CPUID(0x4FFFFFFC), exit number 1 time in vmm: 2505589 cycles
+CPUID(0x4FFFFFFD), exit number 2 exits=0
 CPUID(0x4FFFFFFC), exit number 2 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 3 exits=0
+CPUID(0x4FFFFFFD), exit number 3 exits=0
 CPUID(0x4FFFFFFC), exit number 3 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 4 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 5 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 6 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 7 exits=927
-CPUID(0x4FFFFFFC), exit number 7 time in vmm: 2095817 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 8 exits=0
+CPUID(0x4FFFFFFD), exit type 4 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 5 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 6 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 7 exits=2531
+CPUID(0x4FFFFFFC), exit number 7 time in vmm: 5836922 cycles
+CPUID(0x4FFFFFFD), exit number 8 exits=0
 CPUID(0x4FFFFFFC), exit number 8 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 9 exits=0
+CPUID(0x4FFFFFFD), exit number 9 exits=0
 CPUID(0x4FFFFFFC), exit number 9 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 10 exits=92196
-CPUID(0x4FFFFFFC), exit number 10 time in vmm: 690388797 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 11 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 12 exits=3005
-CPUID(0x4FFFFFFC), exit number 12 time in vmm: 36033916 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 13 exits=0
+CPUID(0x4FFFFFFD), exit number 10 exits=193185
+CPUID(0x4FFFFFFC), exit number 10 time in vmm: 1563742424 cycles
+CPUID(0x4FFFFFFD), exit type 11 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 12 exits=17419
+CPUID(0x4FFFFFFC), exit number 12 time in vmm: 209141056 cycles
+CPUID(0x4FFFFFFD), exit number 13 exits=0
 CPUID(0x4FFFFFFC), exit number 13 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 14 exits=0
+CPUID(0x4FFFFFFD), exit number 14 exits=0
 CPUID(0x4FFFFFFC), exit number 14 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 15 exits=0
+CPUID(0x4FFFFFFD), exit number 15 exits=0
 CPUID(0x4FFFFFFC), exit number 15 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 16 exits=0
+CPUID(0x4FFFFFFD), exit number 16 exits=0
 CPUID(0x4FFFFFFC), exit number 16 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 17 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 18 exits=0
+CPUID(0x4FFFFFFD), exit type 17 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 18 exits=0
 CPUID(0x4FFFFFFC), exit number 18 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 19 exits=0
+CPUID(0x4FFFFFFD), exit number 19 exits=0
 CPUID(0x4FFFFFFC), exit number 19 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 20 exits=0
+CPUID(0x4FFFFFFD), exit number 20 exits=0
 CPUID(0x4FFFFFFC), exit number 20 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 21 exits=0
+CPUID(0x4FFFFFFD), exit number 21 exits=0
 CPUID(0x4FFFFFFC), exit number 21 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 22 exits=0
+CPUID(0x4FFFFFFD), exit number 22 exits=0
 CPUID(0x4FFFFFFC), exit number 22 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 23 exits=0
+CPUID(0x4FFFFFFD), exit number 23 exits=0
 CPUID(0x4FFFFFFC), exit number 23 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 24 exits=0
+CPUID(0x4FFFFFFD), exit number 24 exits=0
 CPUID(0x4FFFFFFC), exit number 24 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 25 exits=0
+CPUID(0x4FFFFFFD), exit number 25 exits=0
 CPUID(0x4FFFFFFC), exit number 25 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 26 exits=0
+CPUID(0x4FFFFFFD), exit number 26 exits=0
 CPUID(0x4FFFFFFC), exit number 26 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 27 exits=0
+CPUID(0x4FFFFFFD), exit number 27 exits=0
 CPUID(0x4FFFFFFC), exit number 27 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 28 exits=14719
-CPUID(0x4FFFFFFC), exit number 28 time in vmm: 274708521 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 29 exits=2
-CPUID(0x4FFFFFFC), exit number 29 time in vmm: 65938 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 30 exits=175725
-CPUID(0x4FFFFFFC), exit number 30 time in vmm: 1148694210 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 31 exits=377
-CPUID(0x4FFFFFFC), exit number 31 time in vmm: 3495284 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 32 exits=6375
-CPUID(0x4FFFFFFC), exit number 32 time in vmm: 113388198 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 33 exits=0
+CPUID(0x4FFFFFFD), exit number 28 exits=29493
+CPUID(0x4FFFFFFC), exit number 28 time in vmm: 532156788 cycles
+CPUID(0x4FFFFFFD), exit number 29 exits=3
+CPUID(0x4FFFFFFC), exit number 29 time in vmm: 102710 cycles
+CPUID(0x4FFFFFFD), exit number 30 exits=352023
+CPUID(0x4FFFFFFC), exit number 30 time in vmm: 2423599266 cycles
+CPUID(0x4FFFFFFD), exit number 31 exits=3522
+CPUID(0x4FFFFFFC), exit number 31 time in vmm: 34284943 cycles
+CPUID(0x4FFFFFFD), exit number 32 exits=39528
+CPUID(0x4FFFFFFC), exit number 32 time in vmm: 525118487 cycles
+CPUID(0x4FFFFFFD), exit number 33 exits=0
 CPUID(0x4FFFFFFC), exit number 33 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 34 exits=0
+CPUID(0x4FFFFFFD), exit number 34 exits=0
 CPUID(0x4FFFFFFC), exit number 34 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 35 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 36 exits=0
+CPUID(0x4FFFFFFD), value 35 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 36 exits=0
 CPUID(0x4FFFFFFC), exit number 36 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 37 exits=0
+CPUID(0x4FFFFFFD), exit number 37 exits=0
 CPUID(0x4FFFFFFC), exit number 37 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 38 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 39 exits=0
+CPUID(0x4FFFFFFD), value 38 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 39 exits=0
 CPUID(0x4FFFFFFC), exit number 39 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 40 exits=64
-CPUID(0x4FFFFFFC), exit number 40 time in vmm: 525602 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 41 exits=0
+CPUID(0x4FFFFFFD), exit number 40 exits=93
+CPUID(0x4FFFFFFC), exit number 40 time in vmm: 782883 cycles
+CPUID(0x4FFFFFFD), exit number 41 exits=0
 CPUID(0x4FFFFFFC), exit number 41 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 42 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 43 exits=0
+CPUID(0x4FFFFFFD), value 42 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 43 exits=0
 CPUID(0x4FFFFFFC), exit number 43 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 44 exits=0
+CPUID(0x4FFFFFFD), exit number 44 exits=0
 CPUID(0x4FFFFFFC), exit number 44 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 45 exits=0
+CPUID(0x4FFFFFFD), exit number 45 exits=0
 CPUID(0x4FFFFFFC), exit number 45 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 46 exits=0
+CPUID(0x4FFFFFFD), exit number 46 exits=0
 CPUID(0x4FFFFFFC), exit number 46 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 47 exits=0
+CPUID(0x4FFFFFFD), exit number 47 exits=0
 CPUID(0x4FFFFFFC), exit number 47 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 48 exits=457101
-CPUID(0x4FFFFFFC), exit number 48 time in vmm: 7266528188 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 49 exits=6909
-CPUID(0x4FFFFFFC), exit number 49 time in vmm: 218220602 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 50 exits=0
+CPUID(0x4FFFFFFD), exit number 48 exits=848919
+CPUID(0x4FFFFFFC), exit number 48 time in vmm: 13121917502 cycles
+CPUID(0x4FFFFFFD), exit number 49 exits=17128
+CPUID(0x4FFFFFFC), exit number 49 time in vmm: 550504853 cycles
+CPUID(0x4FFFFFFD), exit number 50 exits=0
 CPUID(0x4FFFFFFC), exit number 50 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 51 exits=0
+CPUID(0x4FFFFFFD), exit number 51 exits=0
 CPUID(0x4FFFFFFC), exit number 51 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 52 exits=0
+CPUID(0x4FFFFFFD), exit number 52 exits=0
 CPUID(0x4FFFFFFC), exit number 52 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 53 exits=0
+CPUID(0x4FFFFFFD), exit number 53 exits=0
 CPUID(0x4FFFFFFC), exit number 53 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 54 exits=6
-CPUID(0x4FFFFFFC), exit number 54 time in vmm: 47457 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 55 exits=2
-CPUID(0x4FFFFFFC), exit number 55 time in vmm: 25647 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 56 exits=0
+CPUID(0x4FFFFFFD), exit number 54 exits=12
+CPUID(0x4FFFFFFC), exit number 54 time in vmm: 99668 cycles
+CPUID(0x4FFFFFFD), exit number 55 exits=4
+CPUID(0x4FFFFFFC), exit number 55 time in vmm: 52975 cycles
+CPUID(0x4FFFFFFD), exit number 56 exits=0
 CPUID(0x4FFFFFFC), exit number 56 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 57 exits=0
+CPUID(0x4FFFFFFD), exit number 57 exits=0
 CPUID(0x4FFFFFFC), exit number 57 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 58 exits=0
+CPUID(0x4FFFFFFD), exit number 58 exits=0
 CPUID(0x4FFFFFFC), exit number 58 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 59 exits=0
+CPUID(0x4FFFFFFD), exit number 59 exits=0
 CPUID(0x4FFFFFFC), exit number 59 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 60 exits=0
+CPUID(0x4FFFFFFD), exit number 60 exits=0
 CPUID(0x4FFFFFFC), exit number 60 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 61 exits=0
+CPUID(0x4FFFFFFD), exit number 61 exits=0
 CPUID(0x4FFFFFFC), exit number 61 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 62 exits=0
+CPUID(0x4FFFFFFD), exit number 62 exits=0
 CPUID(0x4FFFFFFC), exit number 62 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 63 exits=0
+CPUID(0x4FFFFFFD), exit number 63 exits=0
 CPUID(0x4FFFFFFC), exit number 63 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 64 exits=0
+CPUID(0x4FFFFFFD), exit number 64 exits=0
 CPUID(0x4FFFFFFC), exit number 64 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 65 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 66 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 67 exits=0
+CPUID(0x4FFFFFFD), value 65 not defined by the SDM
+CPUID(0x4FFFFFFD), exit type 66 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 67 exits=0
 CPUID(0x4FFFFFFC), exit number 67 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 68 exits=0
+CPUID(0x4FFFFFFD), exit number 68 exits=0
 CPUID(0x4FFFFFFC), exit number 68 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 69 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 69 not enabled in KVM
 
 #3rd run
 zy@ub:~$ for i in {0..69}; do ./test_assignment3 $i; done
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 0 exits=6741
-CPUID(0x4FFFFFFC), exit number 0 time in vmm: 1026320488 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 1 exits=9455
-CPUID(0x4FFFFFFC), exit number 1 time in vmm: 1264278 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 2 exits=0
+CPUID(0x4FFFFFFD), exit number 0 exits=13482
+CPUID(0x4FFFFFFC), exit number 0 time in vmm: 2156114629 cycles
+CPUID(0x4FFFFFFD), exit number 1 exits=19121
+CPUID(0x4FFFFFFC), exit number 1 time in vmm: 2541595 cycles
+CPUID(0x4FFFFFFD), exit number 2 exits=0
 CPUID(0x4FFFFFFC), exit number 2 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 3 exits=0
+CPUID(0x4FFFFFFD), exit number 3 exits=0
 CPUID(0x4FFFFFFC), exit number 3 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 4 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 5 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 6 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 7 exits=1013
-CPUID(0x4FFFFFFC), exit number 7 time in vmm: 2287945 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 8 exits=0
+CPUID(0x4FFFFFFD), exit type 4 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 5 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 6 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 7 exits=2624
+CPUID(0x4FFFFFFC), exit number 7 time in vmm: 6042803 cycles
+CPUID(0x4FFFFFFD), exit number 8 exits=0
 CPUID(0x4FFFFFFC), exit number 8 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 9 exits=0
+CPUID(0x4FFFFFFD), exit number 9 exits=0
 CPUID(0x4FFFFFFC), exit number 9 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 10 exits=93025
-CPUID(0x4FFFFFFC), exit number 10 time in vmm: 699167320 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 11 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 12 exits=3029
-CPUID(0x4FFFFFFC), exit number 12 time in vmm: 36323561 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 13 exits=0
+CPUID(0x4FFFFFFD), exit number 10 exits=194014
+CPUID(0x4FFFFFFC), exit number 10 time in vmm: 1572524764 cycles
+CPUID(0x4FFFFFFD), exit type 11 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 12 exits=17434
+CPUID(0x4FFFFFFC), exit number 12 time in vmm: 209355676 cycles
+CPUID(0x4FFFFFFD), exit number 13 exits=0
 CPUID(0x4FFFFFFC), exit number 13 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 14 exits=0
+CPUID(0x4FFFFFFD), exit number 14 exits=0
 CPUID(0x4FFFFFFC), exit number 14 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 15 exits=0
+CPUID(0x4FFFFFFD), exit number 15 exits=0
 CPUID(0x4FFFFFFC), exit number 15 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 16 exits=0
+CPUID(0x4FFFFFFD), exit number 16 exits=0
 CPUID(0x4FFFFFFC), exit number 16 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 17 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 18 exits=0
+CPUID(0x4FFFFFFD), exit type 17 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 18 exits=0
 CPUID(0x4FFFFFFC), exit number 18 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 19 exits=0
+CPUID(0x4FFFFFFD), exit number 19 exits=0
 CPUID(0x4FFFFFFC), exit number 19 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 20 exits=0
+CPUID(0x4FFFFFFD), exit number 20 exits=0
 CPUID(0x4FFFFFFC), exit number 20 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 21 exits=0
+CPUID(0x4FFFFFFD), exit number 21 exits=0
 CPUID(0x4FFFFFFC), exit number 21 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 22 exits=0
+CPUID(0x4FFFFFFD), exit number 22 exits=0
 CPUID(0x4FFFFFFC), exit number 22 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 23 exits=0
+CPUID(0x4FFFFFFD), exit number 23 exits=0
 CPUID(0x4FFFFFFC), exit number 23 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 24 exits=0
+CPUID(0x4FFFFFFD), exit number 24 exits=0
 CPUID(0x4FFFFFFC), exit number 24 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 25 exits=0
+CPUID(0x4FFFFFFD), exit number 25 exits=0
 CPUID(0x4FFFFFFC), exit number 25 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 26 exits=0
+CPUID(0x4FFFFFFD), exit number 26 exits=0
 CPUID(0x4FFFFFFC), exit number 26 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 27 exits=0
+CPUID(0x4FFFFFFD), exit number 27 exits=0
 CPUID(0x4FFFFFFC), exit number 27 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 28 exits=14719
-CPUID(0x4FFFFFFC), exit number 28 time in vmm: 274708521 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 29 exits=2
-CPUID(0x4FFFFFFC), exit number 29 time in vmm: 65938 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 30 exits=175725
-CPUID(0x4FFFFFFC), exit number 30 time in vmm: 1148694210 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 31 exits=380
-CPUID(0x4FFFFFFC), exit number 31 time in vmm: 3525681 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 32 exits=6458
-CPUID(0x4FFFFFFC), exit number 32 time in vmm: 114418830 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 33 exits=0
+CPUID(0x4FFFFFFD), exit number 28 exits=29493
+CPUID(0x4FFFFFFC), exit number 28 time in vmm: 532156788 cycles
+CPUID(0x4FFFFFFD), exit number 29 exits=3
+CPUID(0x4FFFFFFC), exit number 29 time in vmm: 102710 cycles
+CPUID(0x4FFFFFFD), exit number 30 exits=352023
+CPUID(0x4FFFFFFC), exit number 30 time in vmm: 2423599266 cycles
+CPUID(0x4FFFFFFD), exit number 31 exits=3523
+CPUID(0x4FFFFFFC), exit number 31 time in vmm: 34295164 cycles
+CPUID(0x4FFFFFFD), exit number 32 exits=39585
+CPUID(0x4FFFFFFC), exit number 32 time in vmm: 525870495 cycles
+CPUID(0x4FFFFFFD), exit number 33 exits=0
 CPUID(0x4FFFFFFC), exit number 33 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 34 exits=0
+CPUID(0x4FFFFFFD), exit number 34 exits=0
 CPUID(0x4FFFFFFC), exit number 34 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 35 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 36 exits=0
+CPUID(0x4FFFFFFD), value 35 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 36 exits=0
 CPUID(0x4FFFFFFC), exit number 36 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 37 exits=0
+CPUID(0x4FFFFFFD), exit number 37 exits=0
 CPUID(0x4FFFFFFC), exit number 37 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 38 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 39 exits=0
+CPUID(0x4FFFFFFD), value 38 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 39 exits=0
 CPUID(0x4FFFFFFC), exit number 39 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 40 exits=64
-CPUID(0x4FFFFFFC), exit number 40 time in vmm: 525602 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 41 exits=0
+CPUID(0x4FFFFFFD), exit number 40 exits=93
+CPUID(0x4FFFFFFC), exit number 40 time in vmm: 782883 cycles
+CPUID(0x4FFFFFFD), exit number 41 exits=0
 CPUID(0x4FFFFFFC), exit number 41 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 42 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 43 exits=0
+CPUID(0x4FFFFFFD), value 42 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 43 exits=0
 CPUID(0x4FFFFFFC), exit number 43 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 44 exits=0
+CPUID(0x4FFFFFFD), exit number 44 exits=0
 CPUID(0x4FFFFFFC), exit number 44 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 45 exits=0
+CPUID(0x4FFFFFFD), exit number 45 exits=0
 CPUID(0x4FFFFFFC), exit number 45 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 46 exits=0
+CPUID(0x4FFFFFFD), exit number 46 exits=0
 CPUID(0x4FFFFFFC), exit number 46 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 47 exits=0
+CPUID(0x4FFFFFFD), exit number 47 exits=0
 CPUID(0x4FFFFFFC), exit number 47 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 48 exits=457104
-CPUID(0x4FFFFFFC), exit number 48 time in vmm: 7266617416 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 49 exits=7169
-CPUID(0x4FFFFFFC), exit number 49 time in vmm: 228190739 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 50 exits=0
+CPUID(0x4FFFFFFD), exit number 48 exits=848926
+CPUID(0x4FFFFFFC), exit number 48 time in vmm: 13122048235 cycles
+CPUID(0x4FFFFFFD), exit number 49 exits=17389
+CPUID(0x4FFFFFFC), exit number 49 time in vmm: 560416389 cycles
+CPUID(0x4FFFFFFD), exit number 50 exits=0
 CPUID(0x4FFFFFFC), exit number 50 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 51 exits=0
+CPUID(0x4FFFFFFD), exit number 51 exits=0
 CPUID(0x4FFFFFFC), exit number 51 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 52 exits=0
+CPUID(0x4FFFFFFD), exit number 52 exits=0
 CPUID(0x4FFFFFFC), exit number 52 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 53 exits=0
+CPUID(0x4FFFFFFD), exit number 53 exits=0
 CPUID(0x4FFFFFFC), exit number 53 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 54 exits=6
-CPUID(0x4FFFFFFC), exit number 54 time in vmm: 47457 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 55 exits=2
-CPUID(0x4FFFFFFC), exit number 55 time in vmm: 25647 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 56 exits=0
+CPUID(0x4FFFFFFD), exit number 54 exits=12
+CPUID(0x4FFFFFFC), exit number 54 time in vmm: 99668 cycles
+CPUID(0x4FFFFFFD), exit number 55 exits=4
+CPUID(0x4FFFFFFC), exit number 55 time in vmm: 52975 cycles
+CPUID(0x4FFFFFFD), exit number 56 exits=0
 CPUID(0x4FFFFFFC), exit number 56 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 57 exits=0
+CPUID(0x4FFFFFFD), exit number 57 exits=0
 CPUID(0x4FFFFFFC), exit number 57 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 58 exits=0
+CPUID(0x4FFFFFFD), exit number 58 exits=0
 CPUID(0x4FFFFFFC), exit number 58 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 59 exits=0
+CPUID(0x4FFFFFFD), exit number 59 exits=0
 CPUID(0x4FFFFFFC), exit number 59 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 60 exits=0
+CPUID(0x4FFFFFFD), exit number 60 exits=0
 CPUID(0x4FFFFFFC), exit number 60 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 61 exits=0
+CPUID(0x4FFFFFFD), exit number 61 exits=0
 CPUID(0x4FFFFFFC), exit number 61 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 62 exits=0
+CPUID(0x4FFFFFFD), exit number 62 exits=0
 CPUID(0x4FFFFFFC), exit number 62 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 63 exits=0
+CPUID(0x4FFFFFFD), exit number 63 exits=0
 CPUID(0x4FFFFFFC), exit number 63 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 64 exits=0
+CPUID(0x4FFFFFFD), exit number 64 exits=0
 CPUID(0x4FFFFFFC), exit number 64 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 65 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 66 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 67 exits=0
+CPUID(0x4FFFFFFD), value 65 not defined by the SDM
+CPUID(0x4FFFFFFD), exit type 66 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 67 exits=0
 CPUID(0x4FFFFFFC), exit number 67 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 68 exits=0
+CPUID(0x4FFFFFFD), exit number 68 exits=0
 CPUID(0x4FFFFFFC), exit number 68 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 69 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 69 not enabled in KVM
 
 #4th run
 zy@ub:~$ for i in {0..69}; do ./test_assignment3 $i; done
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 0 exits=6741
-CPUID(0x4FFFFFFC), exit number 0 time in vmm: 1026320488 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 1 exits=9695
-CPUID(0x4FFFFFFC), exit number 1 time in vmm: 1306272 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 2 exits=0
+CPUID(0x4FFFFFFD), exit number 0 exits=13482
+CPUID(0x4FFFFFFC), exit number 0 time in vmm: 2156114629 cycles
+CPUID(0x4FFFFFFD), exit number 1 exits=19373
+CPUID(0x4FFFFFFC), exit number 1 time in vmm: 2577129 cycles
+CPUID(0x4FFFFFFD), exit number 2 exits=0
 CPUID(0x4FFFFFFC), exit number 2 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 3 exits=0
+CPUID(0x4FFFFFFD), exit number 3 exits=0
 CPUID(0x4FFFFFFC), exit number 3 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 4 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 5 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 6 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 7 exits=1100
-CPUID(0x4FFFFFFC), exit number 7 time in vmm: 2480370 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 8 exits=0
+CPUID(0x4FFFFFFD), exit type 4 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 5 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 6 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 7 exits=2719
+CPUID(0x4FFFFFFC), exit number 7 time in vmm: 6254160 cycles
+CPUID(0x4FFFFFFD), exit number 8 exits=0
 CPUID(0x4FFFFFFC), exit number 8 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 9 exits=0
+CPUID(0x4FFFFFFD), exit number 9 exits=0
 CPUID(0x4FFFFFFC), exit number 9 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 10 exits=93854
-CPUID(0x4FFFFFFC), exit number 10 time in vmm: 708067198 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 11 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 12 exits=3049
-CPUID(0x4FFFFFFC), exit number 12 time in vmm: 36564753 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 13 exits=0
+CPUID(0x4FFFFFFD), exit number 10 exits=194843
+CPUID(0x4FFFFFFC), exit number 10 time in vmm: 1581100498 cycles
+CPUID(0x4FFFFFFD), exit type 11 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 12 exits=17447
+CPUID(0x4FFFFFFC), exit number 12 time in vmm: 209507052 cycles
+CPUID(0x4FFFFFFD), exit number 13 exits=0
 CPUID(0x4FFFFFFC), exit number 13 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 14 exits=0
+CPUID(0x4FFFFFFD), exit number 14 exits=0
 CPUID(0x4FFFFFFC), exit number 14 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 15 exits=0
+CPUID(0x4FFFFFFD), exit number 15 exits=0
 CPUID(0x4FFFFFFC), exit number 15 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 16 exits=0
+CPUID(0x4FFFFFFD), exit number 16 exits=0
 CPUID(0x4FFFFFFC), exit number 16 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 17 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 18 exits=0
+CPUID(0x4FFFFFFD), exit type 17 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 18 exits=0
 CPUID(0x4FFFFFFC), exit number 18 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 19 exits=0
+CPUID(0x4FFFFFFD), exit number 19 exits=0
 CPUID(0x4FFFFFFC), exit number 19 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 20 exits=0
+CPUID(0x4FFFFFFD), exit number 20 exits=0
 CPUID(0x4FFFFFFC), exit number 20 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 21 exits=0
+CPUID(0x4FFFFFFD), exit number 21 exits=0
 CPUID(0x4FFFFFFC), exit number 21 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 22 exits=0
+CPUID(0x4FFFFFFD), exit number 22 exits=0
 CPUID(0x4FFFFFFC), exit number 22 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 23 exits=0
+CPUID(0x4FFFFFFD), exit number 23 exits=0
 CPUID(0x4FFFFFFC), exit number 23 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 24 exits=0
+CPUID(0x4FFFFFFD), exit number 24 exits=0
 CPUID(0x4FFFFFFC), exit number 24 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 25 exits=0
+CPUID(0x4FFFFFFD), exit number 25 exits=0
 CPUID(0x4FFFFFFC), exit number 25 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 26 exits=0
+CPUID(0x4FFFFFFD), exit number 26 exits=0
 CPUID(0x4FFFFFFC), exit number 26 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 27 exits=0
+CPUID(0x4FFFFFFD), exit number 27 exits=0
 CPUID(0x4FFFFFFC), exit number 27 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 28 exits=14719
-CPUID(0x4FFFFFFC), exit number 28 time in vmm: 274708521 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 29 exits=2
-CPUID(0x4FFFFFFC), exit number 29 time in vmm: 65938 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 30 exits=175725
-CPUID(0x4FFFFFFC), exit number 30 time in vmm: 1148694210 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 31 exits=383
-CPUID(0x4FFFFFFC), exit number 31 time in vmm: 3556657 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 32 exits=6526
-CPUID(0x4FFFFFFC), exit number 32 time in vmm: 115277240 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 33 exits=0
+CPUID(0x4FFFFFFD), exit number 28 exits=29493
+CPUID(0x4FFFFFFC), exit number 28 time in vmm: 532156788 cycles
+CPUID(0x4FFFFFFD), exit number 29 exits=3
+CPUID(0x4FFFFFFC), exit number 29 time in vmm: 102710 cycles
+CPUID(0x4FFFFFFD), exit number 30 exits=352023
+CPUID(0x4FFFFFFC), exit number 30 time in vmm: 2423599266 cycles
+CPUID(0x4FFFFFFD), exit number 31 exits=3523
+CPUID(0x4FFFFFFC), exit number 31 time in vmm: 34295164 cycles
+CPUID(0x4FFFFFFD), exit number 32 exits=39637
+CPUID(0x4FFFFFFC), exit number 32 time in vmm: 526597608 cycles
+CPUID(0x4FFFFFFD), exit number 33 exits=0
 CPUID(0x4FFFFFFC), exit number 33 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 34 exits=0
+CPUID(0x4FFFFFFD), exit number 34 exits=0
 CPUID(0x4FFFFFFC), exit number 34 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 35 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 36 exits=0
+CPUID(0x4FFFFFFD), value 35 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 36 exits=0
 CPUID(0x4FFFFFFC), exit number 36 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 37 exits=0
+CPUID(0x4FFFFFFD), exit number 37 exits=0
 CPUID(0x4FFFFFFC), exit number 37 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 38 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 39 exits=0
+CPUID(0x4FFFFFFD), value 38 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 39 exits=0
 CPUID(0x4FFFFFFC), exit number 39 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 40 exits=64
-CPUID(0x4FFFFFFC), exit number 40 time in vmm: 525602 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 41 exits=0
+CPUID(0x4FFFFFFD), exit number 40 exits=93
+CPUID(0x4FFFFFFC), exit number 40 time in vmm: 782883 cycles
+CPUID(0x4FFFFFFD), exit number 41 exits=0
 CPUID(0x4FFFFFFC), exit number 41 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 42 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 43 exits=0
+CPUID(0x4FFFFFFD), value 42 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 43 exits=0
 CPUID(0x4FFFFFFC), exit number 43 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 44 exits=0
+CPUID(0x4FFFFFFD), exit number 44 exits=0
 CPUID(0x4FFFFFFC), exit number 44 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 45 exits=0
+CPUID(0x4FFFFFFD), exit number 45 exits=0
 CPUID(0x4FFFFFFC), exit number 45 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 46 exits=0
+CPUID(0x4FFFFFFD), exit number 46 exits=0
 CPUID(0x4FFFFFFC), exit number 46 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 47 exits=0
+CPUID(0x4FFFFFFD), exit number 47 exits=0
 CPUID(0x4FFFFFFC), exit number 47 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 48 exits=457104
-CPUID(0x4FFFFFFC), exit number 48 time in vmm: 7266617416 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 49 exits=7432
-CPUID(0x4FFFFFFC), exit number 49 time in vmm: 238192000 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 50 exits=0
+CPUID(0x4FFFFFFD), exit number 48 exits=848944
+CPUID(0x4FFFFFFC), exit number 48 time in vmm: 13122378323 cycles
+CPUID(0x4FFFFFFD), exit number 49 exits=17642
+CPUID(0x4FFFFFFC), exit number 49 time in vmm: 569886258 cycles
+CPUID(0x4FFFFFFD), exit number 50 exits=0
 CPUID(0x4FFFFFFC), exit number 50 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 51 exits=0
+CPUID(0x4FFFFFFD), exit number 51 exits=0
 CPUID(0x4FFFFFFC), exit number 51 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 52 exits=0
+CPUID(0x4FFFFFFD), exit number 52 exits=0
 CPUID(0x4FFFFFFC), exit number 52 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 53 exits=0
+CPUID(0x4FFFFFFD), exit number 53 exits=0
 CPUID(0x4FFFFFFC), exit number 53 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 54 exits=6
-CPUID(0x4FFFFFFC), exit number 54 time in vmm: 47457 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 55 exits=2
-CPUID(0x4FFFFFFC), exit number 55 time in vmm: 25647 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 56 exits=0
+CPUID(0x4FFFFFFD), exit number 54 exits=12
+CPUID(0x4FFFFFFC), exit number 54 time in vmm: 99668 cycles
+CPUID(0x4FFFFFFD), exit number 55 exits=4
+CPUID(0x4FFFFFFC), exit number 55 time in vmm: 52975 cycles
+CPUID(0x4FFFFFFD), exit number 56 exits=0
 CPUID(0x4FFFFFFC), exit number 56 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 57 exits=0
+CPUID(0x4FFFFFFD), exit number 57 exits=0
 CPUID(0x4FFFFFFC), exit number 57 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 58 exits=0
+CPUID(0x4FFFFFFD), exit number 58 exits=0
 CPUID(0x4FFFFFFC), exit number 58 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 59 exits=0
+CPUID(0x4FFFFFFD), exit number 59 exits=0
 CPUID(0x4FFFFFFC), exit number 59 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 60 exits=0
+CPUID(0x4FFFFFFD), exit number 60 exits=0
 CPUID(0x4FFFFFFC), exit number 60 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 61 exits=0
+CPUID(0x4FFFFFFD), exit number 61 exits=0
 CPUID(0x4FFFFFFC), exit number 61 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 62 exits=0
+CPUID(0x4FFFFFFD), exit number 62 exits=0
 CPUID(0x4FFFFFFC), exit number 62 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 63 exits=0
+CPUID(0x4FFFFFFD), exit number 63 exits=0
 CPUID(0x4FFFFFFC), exit number 63 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 64 exits=0
+CPUID(0x4FFFFFFD), exit number 64 exits=0
 CPUID(0x4FFFFFFC), exit number 64 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 65 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 66 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 67 exits=0
+CPUID(0x4FFFFFFD), value 65 not defined by the SDM
+CPUID(0x4FFFFFFD), exit type 66 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 67 exits=0
 CPUID(0x4FFFFFFC), exit number 67 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 68 exits=0
+CPUID(0x4FFFFFFD), exit number 68 exits=0
 CPUID(0x4FFFFFFC), exit number 68 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 69 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 69 not enabled in KVM
 
 #5th run
 zy@ub:~$ for i in {0..69}; do ./test_assignment3 $i; done
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 0 exits=6741
-CPUID(0x4FFFFFFC), exit number 0 time in vmm: 1026320488 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 1 exits=9969
-CPUID(0x4FFFFFFC), exit number 1 time in vmm: 1343572 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 2 exits=0
+CPUID(0x4FFFFFFD), exit number 0 exits=13482
+CPUID(0x4FFFFFFC), exit number 0 time in vmm: 2156114629 cycles
+CPUID(0x4FFFFFFD), exit number 1 exits=19607
+CPUID(0x4FFFFFFC), exit number 1 time in vmm: 2612089 cycles
+CPUID(0x4FFFFFFD), exit number 2 exits=0
 CPUID(0x4FFFFFFC), exit number 2 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 3 exits=0
+CPUID(0x4FFFFFFD), exit number 3 exits=0
 CPUID(0x4FFFFFFC), exit number 3 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 4 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 5 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 6 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 7 exits=1165
-CPUID(0x4FFFFFFC), exit number 7 time in vmm: 2632206 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 8 exits=0
+CPUID(0x4FFFFFFD), exit type 4 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 5 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 6 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 7 exits=2804
+CPUID(0x4FFFFFFC), exit number 7 time in vmm: 6433850 cycles
+CPUID(0x4FFFFFFD), exit number 8 exits=0
 CPUID(0x4FFFFFFC), exit number 8 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 9 exits=0
+CPUID(0x4FFFFFFD), exit number 9 exits=0
 CPUID(0x4FFFFFFC), exit number 9 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 10 exits=94683
-CPUID(0x4FFFFFFC), exit number 10 time in vmm: 716872012 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 11 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 12 exits=3070
-CPUID(0x4FFFFFFC), exit number 12 time in vmm: 36810328 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 13 exits=0
+CPUID(0x4FFFFFFD), exit number 10 exits=195672
+CPUID(0x4FFFFFFC), exit number 10 time in vmm: 1589502037 cycles
+CPUID(0x4FFFFFFD), exit type 11 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 12 exits=17461
+CPUID(0x4FFFFFFC), exit number 12 time in vmm: 209667863 cycles
+CPUID(0x4FFFFFFD), exit number 13 exits=0
 CPUID(0x4FFFFFFC), exit number 13 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 14 exits=0
+CPUID(0x4FFFFFFD), exit number 14 exits=0
 CPUID(0x4FFFFFFC), exit number 14 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 15 exits=0
+CPUID(0x4FFFFFFD), exit number 15 exits=0
 CPUID(0x4FFFFFFC), exit number 15 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 16 exits=0
+CPUID(0x4FFFFFFD), exit number 16 exits=0
 CPUID(0x4FFFFFFC), exit number 16 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 17 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 18 exits=0
+CPUID(0x4FFFFFFD), exit type 17 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 18 exits=0
 CPUID(0x4FFFFFFC), exit number 18 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 19 exits=0
+CPUID(0x4FFFFFFD), exit number 19 exits=0
 CPUID(0x4FFFFFFC), exit number 19 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 20 exits=0
+CPUID(0x4FFFFFFD), exit number 20 exits=0
 CPUID(0x4FFFFFFC), exit number 20 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 21 exits=0
+CPUID(0x4FFFFFFD), exit number 21 exits=0
 CPUID(0x4FFFFFFC), exit number 21 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 22 exits=0
+CPUID(0x4FFFFFFD), exit number 22 exits=0
 CPUID(0x4FFFFFFC), exit number 22 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 23 exits=0
+CPUID(0x4FFFFFFD), exit number 23 exits=0
 CPUID(0x4FFFFFFC), exit number 23 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 24 exits=0
+CPUID(0x4FFFFFFD), exit number 24 exits=0
 CPUID(0x4FFFFFFC), exit number 24 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 25 exits=0
+CPUID(0x4FFFFFFD), exit number 25 exits=0
 CPUID(0x4FFFFFFC), exit number 25 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 26 exits=0
+CPUID(0x4FFFFFFD), exit number 26 exits=0
 CPUID(0x4FFFFFFC), exit number 26 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 27 exits=0
+CPUID(0x4FFFFFFD), exit number 27 exits=0
 CPUID(0x4FFFFFFC), exit number 27 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 28 exits=14719
-CPUID(0x4FFFFFFC), exit number 28 time in vmm: 274708521 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 29 exits=2
-CPUID(0x4FFFFFFC), exit number 29 time in vmm: 65938 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 30 exits=175725
-CPUID(0x4FFFFFFC), exit number 30 time in vmm: 1148694210 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 31 exits=385
-CPUID(0x4FFFFFFC), exit number 31 time in vmm: 3574972 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 32 exits=6604
-CPUID(0x4FFFFFFC), exit number 32 time in vmm: 116241405 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 33 exits=0
+CPUID(0x4FFFFFFD), exit number 28 exits=29493
+CPUID(0x4FFFFFFC), exit number 28 time in vmm: 532156788 cycles
+CPUID(0x4FFFFFFD), exit number 29 exits=3
+CPUID(0x4FFFFFFC), exit number 29 time in vmm: 102710 cycles
+CPUID(0x4FFFFFFD), exit number 30 exits=352023
+CPUID(0x4FFFFFFC), exit number 30 time in vmm: 2423599266 cycles
+CPUID(0x4FFFFFFD), exit number 31 exits=3525
+CPUID(0x4FFFFFFC), exit number 31 time in vmm: 34315579 cycles
+CPUID(0x4FFFFFFD), exit number 32 exits=39690
+CPUID(0x4FFFFFFC), exit number 32 time in vmm: 527238625 cycles
+CPUID(0x4FFFFFFD), exit number 33 exits=0
 CPUID(0x4FFFFFFC), exit number 33 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 34 exits=0
+CPUID(0x4FFFFFFD), exit number 34 exits=0
 CPUID(0x4FFFFFFC), exit number 34 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 35 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 36 exits=0
+CPUID(0x4FFFFFFD), value 35 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 36 exits=0
 CPUID(0x4FFFFFFC), exit number 36 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 37 exits=0
+CPUID(0x4FFFFFFD), exit number 37 exits=0
 CPUID(0x4FFFFFFC), exit number 37 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 38 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 39 exits=0
+CPUID(0x4FFFFFFD), value 38 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 39 exits=0
 CPUID(0x4FFFFFFC), exit number 39 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 40 exits=64
-CPUID(0x4FFFFFFC), exit number 40 time in vmm: 525602 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 41 exits=0
+CPUID(0x4FFFFFFD), exit number 40 exits=93
+CPUID(0x4FFFFFFC), exit number 40 time in vmm: 782883 cycles
+CPUID(0x4FFFFFFD), exit number 41 exits=0
 CPUID(0x4FFFFFFC), exit number 41 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 42 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 43 exits=0
+CPUID(0x4FFFFFFD), value 42 not defined by the SDM
+CPUID(0x4FFFFFFD), exit number 43 exits=0
 CPUID(0x4FFFFFFC), exit number 43 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 44 exits=0
+CPUID(0x4FFFFFFD), exit number 44 exits=0
 CPUID(0x4FFFFFFC), exit number 44 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 45 exits=0
+CPUID(0x4FFFFFFD), exit number 45 exits=0
 CPUID(0x4FFFFFFC), exit number 45 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 46 exits=0
+CPUID(0x4FFFFFFD), exit number 46 exits=0
 CPUID(0x4FFFFFFC), exit number 46 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 47 exits=0
+CPUID(0x4FFFFFFD), exit number 47 exits=0
 CPUID(0x4FFFFFFC), exit number 47 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 48 exits=457105
-CPUID(0x4FFFFFFC), exit number 48 time in vmm: 7266645106 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 49 exits=7695
-CPUID(0x4FFFFFFC), exit number 49 time in vmm: 247984526 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 50 exits=0
+CPUID(0x4FFFFFFD), exit number 48 exits=848958
+CPUID(0x4FFFFFFC), exit number 48 time in vmm: 13122640494 cycles
+CPUID(0x4FFFFFFD), exit number 49 exits=17893
+CPUID(0x4FFFFFFC), exit number 49 time in vmm: 579053945 cycles
+CPUID(0x4FFFFFFD), exit number 50 exits=0
 CPUID(0x4FFFFFFC), exit number 50 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 51 exits=0
+CPUID(0x4FFFFFFD), exit number 51 exits=0
 CPUID(0x4FFFFFFC), exit number 51 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 52 exits=0
+CPUID(0x4FFFFFFD), exit number 52 exits=0
 CPUID(0x4FFFFFFC), exit number 52 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 53 exits=0
+CPUID(0x4FFFFFFD), exit number 53 exits=0
 CPUID(0x4FFFFFFC), exit number 53 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 54 exits=6
-CPUID(0x4FFFFFFC), exit number 54 time in vmm: 47457 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 55 exits=2
-CPUID(0x4FFFFFFC), exit number 55 time in vmm: 25647 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 56 exits=0
+CPUID(0x4FFFFFFD), exit number 54 exits=12
+CPUID(0x4FFFFFFC), exit number 54 time in vmm: 99668 cycles
+CPUID(0x4FFFFFFD), exit number 55 exits=4
+CPUID(0x4FFFFFFC), exit number 55 time in vmm: 52975 cycles
+CPUID(0x4FFFFFFD), exit number 56 exits=0
 CPUID(0x4FFFFFFC), exit number 56 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 57 exits=0
+CPUID(0x4FFFFFFD), exit number 57 exits=0
 CPUID(0x4FFFFFFC), exit number 57 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 58 exits=0
+CPUID(0x4FFFFFFD), exit number 58 exits=0
 CPUID(0x4FFFFFFC), exit number 58 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 59 exits=0
+CPUID(0x4FFFFFFD), exit number 59 exits=0
 CPUID(0x4FFFFFFC), exit number 59 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 60 exits=0
+CPUID(0x4FFFFFFD), exit number 60 exits=0
 CPUID(0x4FFFFFFC), exit number 60 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 61 exits=0
+CPUID(0x4FFFFFFD), exit number 61 exits=0
 CPUID(0x4FFFFFFC), exit number 61 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 62 exits=0
+CPUID(0x4FFFFFFD), exit number 62 exits=0
 CPUID(0x4FFFFFFC), exit number 62 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 63 exits=0
+CPUID(0x4FFFFFFD), exit number 63 exits=0
 CPUID(0x4FFFFFFC), exit number 63 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 64 exits=0
+CPUID(0x4FFFFFFD), exit number 64 exits=0
 CPUID(0x4FFFFFFC), exit number 64 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 65 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 66 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 67 exits=0
+CPUID(0x4FFFFFFD), value 65 not defined by the SDM
+CPUID(0x4FFFFFFD), exit type 66 not enabled in KVM
+CPUID(0x4FFFFFFD), exit number 67 exits=0
 CPUID(0x4FFFFFFC), exit number 67 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 68 exits=0
+CPUID(0x4FFFFFFD), exit number 68 exits=0
 CPUID(0x4FFFFFFC), exit number 68 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 69 not enabled in KVM
-
-#6th run
-zy@ub:~$ for i in {0..69}; do ./test_assignment3 $i; done
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 0 exits=6741
-CPUID(0x4FFFFFFC), exit number 0 time in vmm: 1026320488 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 1 exits=10230
-CPUID(0x4FFFFFFC), exit number 1 time in vmm: 1377545 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 2 exits=0
-CPUID(0x4FFFFFFC), exit number 2 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 3 exits=0
-CPUID(0x4FFFFFFC), exit number 3 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 4 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 5 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 6 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 7 exits=1239
-CPUID(0x4FFFFFFC), exit number 7 time in vmm: 2795866 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 8 exits=0
-CPUID(0x4FFFFFFC), exit number 8 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 9 exits=0
-CPUID(0x4FFFFFFC), exit number 9 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 10 exits=95512
-CPUID(0x4FFFFFFC), exit number 10 time in vmm: 725611402 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 11 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 12 exits=3091
-CPUID(0x4FFFFFFC), exit number 12 time in vmm: 37058922 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 13 exits=0
-CPUID(0x4FFFFFFC), exit number 13 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 14 exits=0
-CPUID(0x4FFFFFFC), exit number 14 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 15 exits=0
-CPUID(0x4FFFFFFC), exit number 15 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 16 exits=0
-CPUID(0x4FFFFFFC), exit number 16 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 17 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 18 exits=0
-CPUID(0x4FFFFFFC), exit number 18 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 19 exits=0
-CPUID(0x4FFFFFFC), exit number 19 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 20 exits=0
-CPUID(0x4FFFFFFC), exit number 20 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 21 exits=0
-CPUID(0x4FFFFFFC), exit number 21 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 22 exits=0
-CPUID(0x4FFFFFFC), exit number 22 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 23 exits=0
-CPUID(0x4FFFFFFC), exit number 23 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 24 exits=0
-CPUID(0x4FFFFFFC), exit number 24 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 25 exits=0
-CPUID(0x4FFFFFFC), exit number 25 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 26 exits=0
-CPUID(0x4FFFFFFC), exit number 26 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 27 exits=0
-CPUID(0x4FFFFFFC), exit number 27 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 28 exits=14719
-CPUID(0x4FFFFFFC), exit number 28 time in vmm: 274708521 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 29 exits=2
-CPUID(0x4FFFFFFC), exit number 29 time in vmm: 65938 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 30 exits=175725
-CPUID(0x4FFFFFFC), exit number 30 time in vmm: 1148694210 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 31 exits=387
-CPUID(0x4FFFFFFC), exit number 31 time in vmm: 3597148 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 32 exits=6673
-CPUID(0x4FFFFFFC), exit number 32 time in vmm: 117124013 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 33 exits=0
-CPUID(0x4FFFFFFC), exit number 33 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 34 exits=0
-CPUID(0x4FFFFFFC), exit number 34 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 35 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 36 exits=0
-CPUID(0x4FFFFFFC), exit number 36 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 37 exits=0
-CPUID(0x4FFFFFFC), exit number 37 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 38 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 39 exits=0
-CPUID(0x4FFFFFFC), exit number 39 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 40 exits=64
-CPUID(0x4FFFFFFC), exit number 40 time in vmm: 525602 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 41 exits=0
-CPUID(0x4FFFFFFC), exit number 41 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 42 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 43 exits=0
-CPUID(0x4FFFFFFC), exit number 43 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 44 exits=0
-CPUID(0x4FFFFFFC), exit number 44 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 45 exits=0
-CPUID(0x4FFFFFFC), exit number 45 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 46 exits=0
-CPUID(0x4FFFFFFC), exit number 46 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 47 exits=0
-CPUID(0x4FFFFFFC), exit number 47 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 48 exits=457105
-CPUID(0x4FFFFFFC), exit number 48 time in vmm: 7266645106 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 49 exits=7958
-CPUID(0x4FFFFFFC), exit number 49 time in vmm: 257910176 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 50 exits=0
-CPUID(0x4FFFFFFC), exit number 50 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 51 exits=0
-CPUID(0x4FFFFFFC), exit number 51 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 52 exits=0
-CPUID(0x4FFFFFFC), exit number 52 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 53 exits=0
-CPUID(0x4FFFFFFC), exit number 53 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 54 exits=6
-CPUID(0x4FFFFFFC), exit number 54 time in vmm: 47457 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 55 exits=2
-CPUID(0x4FFFFFFC), exit number 55 time in vmm: 25647 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 56 exits=0
-CPUID(0x4FFFFFFC), exit number 56 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 57 exits=0
-CPUID(0x4FFFFFFC), exit number 57 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 58 exits=0
-CPUID(0x4FFFFFFC), exit number 58 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 59 exits=0
-CPUID(0x4FFFFFFC), exit number 59 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 60 exits=0
-CPUID(0x4FFFFFFC), exit number 60 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 61 exits=0
-CPUID(0x4FFFFFFC), exit number 61 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 62 exits=0
-CPUID(0x4FFFFFFC), exit number 62 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 63 exits=0
-CPUID(0x4FFFFFFC), exit number 63 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 64 exits=0
-CPUID(0x4FFFFFFC), exit number 64 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), value 65 not defined by the SDM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 66 not enabled in KVM
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 67 exits=0
-CPUID(0x4FFFFFFC), exit number 67 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit number 68 exits=0
-CPUID(0x4FFFFFFC), exit number 68 time in vmm: 0 cycles
-CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 69 not enabled in KVM
+CPUID(0x4FFFFFFD), exit type 69 not enabled in KVM
 
 zy@ub:~$ cpuid -l 0x4fffffff
 CPU 0:
-   0x4fffffff 0x00: eax=0x000bf132 ebx=0xff49d4ea ecx=0x00000000 edx=0xffff9130
-zy@ub:~$ cpuid -l 0x4ffffffe
-CPU 0:
-   0x4ffffffe 0x00: eax=0x4ffffffe ebx=0x00000002 ecx=0x89cd1c8f edx=0xffff9130
-zy@ub:~$ 
+   0x4fffffff 0x00: eax=0x0017892f ebx=0xff49d4ea ecx=0x00000000 edx=0xffff9130
+## total exits=1542447 after those test runs
