@@ -17,7 +17,7 @@
     1. add two global arrays: 
        * exits_per_reason[70]: to calculate the total number of exits for the exit number provided (on input) in %ecx;
        * total_time_spent_per_reason[70]: to count the total time spent processing the exit number (on input) in %ecx;
-     1. modify the function kvm_emulate_cpuid(...) to report back the information when below CPUID leaf nodes code in EAX are met:
+    2. modify the function kvm_emulate_cpuid(...) to report back the information when below CPUID leaf nodes code in EAX are met:
        * read the number of total exits for the exit number provided on input while EAX is 0x4FFFFFFD;
        * read the number of total time spent processing the exit number provided on input while EAX is 0x4FFFFFFC;
   * In vmx.c file, 
