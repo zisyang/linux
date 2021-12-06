@@ -1,0 +1,26 @@
+virsh start Ubtest1
+virsh net-dhcp-leases default
+
+login to Ubtest1
+run the leaf node 0x4FFFFFFF,0x4FFFFFFE, record the total exit for all
+run the leaf node 0x4FFFFFFD,0x4FFFFFFC from a sequence of 0 to 69 record the total exits for each type
+logout Ubtest1
+shutdown Ubtest1
+dmesg >output.txt
+
+sudo rmmod kvm_intel kvm
+lsmod | grep kvm
+uname -r
+output is 5.15.0-rc7
+sudo insmod /lib/modules/5.15.0-rc7/kernel/arch/x86/kvm/kvm.ko
+sudo insmod /lib/modules/5.15.0-rc7/kernel/arch/x86/kvm/kvm-intel.ko ept=0
+lsmod | grep kvm
+
+virsh start Ubtest1
+virsh net-dhcp-leases default
+
+login again to Ubtest1
+run again the leaf node 0x4FFFFFFF,0x4FFFFFFE, record the total exit for all
+run again the leaf node 0x4FFFFFFD,0x4FFFFFFC from a sequence of 0 to 69 record the total exits for each type
+logout Ubtest1
+dmesg > output_ept=0.txt
