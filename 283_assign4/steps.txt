@@ -5,8 +5,8 @@ login to Ubtest1
 run the leaf node 0x4FFFFFFF,0x4FFFFFFE, record the total exit for all
 run the leaf node 0x4FFFFFFD,0x4FFFFFFC from a sequence of 0 to 69 record the total exits for each type
 logout Ubtest1
-shutdown Ubtest1
 dmesg >output.txt
+shutdown Ubtest1
 
 sudo rmmod kvm_intel kvm
 lsmod | grep kvm
