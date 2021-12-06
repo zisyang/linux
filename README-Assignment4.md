@@ -392,7 +392,7 @@
 ```
 
 ### 3. What did you learn from the count of exits? Was the count what you expected? If not, why not?
-- 
+- The ept flag for ept vs no-ept caused exits in different ways. Total exit count was higher when ept=0 is set meaning that forcing KVM to use shadow paging could cuase many exits. What I expected is that the changes should only affect exit reasons related to EPT, but some of others were also changed.
 
 ### 4. What changed between the two runs (ept vs no-ept)?
 - Some exits didn't trigger when ept=0, but triggered when no ept set, such as:
