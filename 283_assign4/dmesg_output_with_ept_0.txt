@@ -1,0 +1,202 @@
+[ 8306.884800] CPUID(0x4FFFFFFF), exits=2292304
+[ 8306.887935] CPUID(0x4FFFFFFE), total time in vmm: 34224632147 cycles
+[ 8306.887938]  --- (0x4FFFFFFE), registers: ebx=7, ecx=4159861075
+[ 8310.383197] CPUID(0x4FFFFFFD), exit number 0 exits=252436
+[ 8310.386599] CPUID(0x4FFFFFFC), exit number 0 time in vmm: 7435052927 cycles
+[ 8310.386602]  --- (0x4FFFFFFC), registers: ebx=1, ecx=3140085631
+[ 8310.409279] CPUID(0x4FFFFFFD), exit number 1 exits=6159
+[ 8310.412886] CPUID(0x4FFFFFFC), exit number 1 time in vmm: 528640 cycles
+[ 8310.412889]  --- (0x4FFFFFFC), registers: ebx=0, ecx=528640
+[ 8310.434941] CPUID(0x4FFFFFFD), exit number 2 exits=0
+[ 8310.438375] CPUID(0x4FFFFFFC), exit number 2 time in vmm: 0 cycles
+[ 8310.438378]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.458866] CPUID(0x4FFFFFFD), exit number 3 exits=0
+[ 8310.461898] CPUID(0x4FFFFFFC), exit number 3 time in vmm: 0 cycles
+[ 8310.461900]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.482517] CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 4 not enabled in KVM
+[ 8310.482520]  --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=0, ebx=0, ecx=0, edx=0
+[ 8310.503423] CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 5 not enabled in KVM
+[ 8310.503426]  --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=0, ebx=0, ecx=0, edx=0
+[ 8310.525891] CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 6 not enabled in KVM
+[ 8310.525894]  --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=0, ebx=0, ecx=0, edx=0
+[ 8310.547037] CPUID(0x4FFFFFFD), exit number 7 exits=6503
+[ 8310.550117] CPUID(0x4FFFFFFC), exit number 7 time in vmm: 13471824 cycles
+[ 8310.550120]  --- (0x4FFFFFFC), registers: ebx=0, ecx=13471824
+[ 8310.571397] CPUID(0x4FFFFFFD), exit number 8 exits=0
+[ 8310.574377] CPUID(0x4FFFFFFC), exit number 8 time in vmm: 0 cycles
+[ 8310.574380]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.596167] CPUID(0x4FFFFFFD), exit number 9 exits=0
+[ 8310.599271] CPUID(0x4FFFFFFC), exit number 9 time in vmm: 0 cycles
+[ 8310.599274]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.621299] CPUID(0x4FFFFFFD), exit number 10 exits=97495
+[ 8310.624476] CPUID(0x4FFFFFFC), exit number 10 time in vmm: 693333804 cycles
+[ 8310.624479]  --- (0x4FFFFFFC), registers: ebx=0, ecx=693333804
+[ 8310.645998] CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 11 not enabled in KVM
+[ 8310.646002]  --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=0, ebx=0, ecx=0, edx=0
+[ 8310.668226] CPUID(0x4FFFFFFD), exit number 12 exits=444
+[ 8310.670929] CPUID(0x4FFFFFFC), exit number 12 time in vmm: 4821198 cycles
+[ 8310.670932]  --- (0x4FFFFFFC), registers: ebx=0, ecx=4821198
+[ 8310.692036] CPUID(0x4FFFFFFD), exit number 13 exits=0
+[ 8310.695058] CPUID(0x4FFFFFFC), exit number 13 time in vmm: 0 cycles
+[ 8310.695061]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.717018] CPUID(0x4FFFFFFD), exit number 14 exits=98810
+[ 8310.719605] CPUID(0x4FFFFFFC), exit number 14 time in vmm: 1425792462 cycles
+[ 8310.719608]  --- (0x4FFFFFFC), registers: ebx=0, ecx=1425792462
+[ 8310.741545] CPUID(0x4FFFFFFD), exit number 15 exits=0
+[ 8310.744788] CPUID(0x4FFFFFFC), exit number 15 time in vmm: 0 cycles
+[ 8310.744791]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.766972] CPUID(0x4FFFFFFD), exit number 16 exits=0
+[ 8310.769906] CPUID(0x4FFFFFFC), exit number 16 time in vmm: 0 cycles
+[ 8310.769909]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.791772] CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 17 not enabled in KVM
+[ 8310.791775]  --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=0, ebx=0, ecx=0, edx=0
+[ 8310.812342] CPUID(0x4FFFFFFD), exit number 18 exits=0
+[ 8310.815053] CPUID(0x4FFFFFFC), exit number 18 time in vmm: 0 cycles
+[ 8310.815056]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.836803] CPUID(0x4FFFFFFD), exit number 19 exits=0
+[ 8310.839493] CPUID(0x4FFFFFFC), exit number 19 time in vmm: 0 cycles
+[ 8310.839495]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.860269] CPUID(0x4FFFFFFD), exit number 20 exits=0
+[ 8310.863290] CPUID(0x4FFFFFFC), exit number 20 time in vmm: 0 cycles
+[ 8310.863294]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.884798] CPUID(0x4FFFFFFD), exit number 21 exits=0
+[ 8310.887522] CPUID(0x4FFFFFFC), exit number 21 time in vmm: 0 cycles
+[ 8310.887525]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.910258] CPUID(0x4FFFFFFD), exit number 22 exits=0
+[ 8310.913352] CPUID(0x4FFFFFFC), exit number 22 time in vmm: 0 cycles
+[ 8310.913355]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.935601] CPUID(0x4FFFFFFD), exit number 23 exits=0
+[ 8310.938266] CPUID(0x4FFFFFFC), exit number 23 time in vmm: 0 cycles
+[ 8310.938269]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.958786] CPUID(0x4FFFFFFD), exit number 24 exits=0
+[ 8310.961835] CPUID(0x4FFFFFFC), exit number 24 time in vmm: 0 cycles
+[ 8310.961838]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8310.983146] CPUID(0x4FFFFFFD), exit number 25 exits=0
+[ 8310.985807] CPUID(0x4FFFFFFC), exit number 25 time in vmm: 0 cycles
+[ 8310.985810]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.006430] CPUID(0x4FFFFFFD), exit number 26 exits=0
+[ 8311.009553] CPUID(0x4FFFFFFC), exit number 26 time in vmm: 0 cycles
+[ 8311.009556]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.030409] CPUID(0x4FFFFFFD), exit number 27 exits=0
+[ 8311.033047] CPUID(0x4FFFFFFC), exit number 27 time in vmm: 0 cycles
+[ 8311.033050]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.054247] CPUID(0x4FFFFFFD), exit number 28 exits=1640347
+[ 8311.057237] CPUID(0x4FFFFFFC), exit number 28 time in vmm: 20605391769 cycles
+[ 8311.057240]  --- (0x4FFFFFFC), registers: ebx=4, ecx=3425522585
+[ 8311.078318] CPUID(0x4FFFFFFD), exit number 29 exits=1
+[ 8311.081328] CPUID(0x4FFFFFFC), exit number 29 time in vmm: 37435 cycles
+[ 8311.081331]  --- (0x4FFFFFFC), registers: ebx=0, ecx=37435
+[ 8311.102080] CPUID(0x4FFFFFFD), exit number 30 exits=175583
+[ 8311.104850] CPUID(0x4FFFFFFC), exit number 30 time in vmm: 1121373658 cycles
+[ 8311.104853]  --- (0x4FFFFFFC), registers: ebx=0, ecx=1121373658
+[ 8311.125451] CPUID(0x4FFFFFFD), exit number 31 exits=239
+[ 8311.128579] CPUID(0x4FFFFFFC), exit number 31 time in vmm: 2029015 cycles
+[ 8311.128582]  --- (0x4FFFFFFC), registers: ebx=0, ecx=2029015
+[ 8311.150179] CPUID(0x4FFFFFFD), exit number 32 exits=11490
+[ 8311.153252] CPUID(0x4FFFFFFC), exit number 32 time in vmm: 118379194 cycles
+[ 8311.153255]  --- (0x4FFFFFFC), registers: ebx=0, ecx=118379194
+[ 8311.183317] CPUID(0x4FFFFFFD), exit number 33 exits=12314
+[ 8311.186075] CPUID(0x4FFFFFFC), exit number 33 time in vmm: 2499533663 cycles
+[ 8311.186078]  --- (0x4FFFFFFC), registers: ebx=0, ecx=2499533663
+[ 8311.207184] CPUID(0x4FFFFFFD), exit number 34 exits=0
+[ 8311.210406] CPUID(0x4FFFFFFC), exit number 34 time in vmm: 0 cycles
+[ 8311.210409]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.232561] CPUID(0x4FFFFFFD|0x4FFFFFFC), value 35 not defined by the SDM
+[ 8311.232564]  --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=0, ebx=0, ecx=0, edx=4294967295
+[ 8311.256023] CPUID(0x4FFFFFFD), exit number 36 exits=0
+[ 8311.259177] CPUID(0x4FFFFFFC), exit number 36 time in vmm: 0 cycles
+[ 8311.259180]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.280389] CPUID(0x4FFFFFFD), exit number 37 exits=0
+[ 8311.283262] CPUID(0x4FFFFFFC), exit number 37 time in vmm: 0 cycles
+[ 8311.283265]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.304973] CPUID(0x4FFFFFFD|0x4FFFFFFC), value 38 not defined by the SDM
+[ 8311.304976]  --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=0, ebx=0, ecx=0, edx=4294967295
+[ 8311.326262] CPUID(0x4FFFFFFD), exit number 39 exits=0
+[ 8311.328956] CPUID(0x4FFFFFFC), exit number 39 time in vmm: 0 cycles
+[ 8311.328958]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.350541] CPUID(0x4FFFFFFD), exit number 40 exits=24
+[ 8311.353558] CPUID(0x4FFFFFFC), exit number 40 time in vmm: 200511 cycles
+[ 8311.353572]  --- (0x4FFFFFFC), registers: ebx=0, ecx=200511
+[ 8311.374987] CPUID(0x4FFFFFFD), exit number 41 exits=0
+[ 8311.378108] CPUID(0x4FFFFFFC), exit number 41 time in vmm: 0 cycles
+[ 8311.378111]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.398626] CPUID(0x4FFFFFFD|0x4FFFFFFC), value 42 not defined by the SDM
+[ 8311.398628]  --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=0, ebx=0, ecx=0, edx=4294967295
+[ 8311.421062] CPUID(0x4FFFFFFD), exit number 43 exits=0
+[ 8311.424120] CPUID(0x4FFFFFFC), exit number 43 time in vmm: 0 cycles
+[ 8311.424123]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.446106] CPUID(0x4FFFFFFD), exit number 44 exits=0
+[ 8311.449364] CPUID(0x4FFFFFFC), exit number 44 time in vmm: 0 cycles
+[ 8311.449367]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.470670] CPUID(0x4FFFFFFD), exit number 45 exits=0
+[ 8311.473719] CPUID(0x4FFFFFFC), exit number 45 time in vmm: 0 cycles
+[ 8311.473722]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.495741] CPUID(0x4FFFFFFD), exit number 46 exits=0
+[ 8311.498834] CPUID(0x4FFFFFFC), exit number 46 time in vmm: 0 cycles
+[ 8311.498837]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.520902] CPUID(0x4FFFFFFD), exit number 47 exits=0
+[ 8311.524098] CPUID(0x4FFFFFFC), exit number 47 time in vmm: 0 cycles
+[ 8311.524101]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.546264] CPUID(0x4FFFFFFD), exit number 48 exits=0
+[ 8311.549328] CPUID(0x4FFFFFFC), exit number 48 time in vmm: 0 cycles
+[ 8311.549331]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.570805] CPUID(0x4FFFFFFD), exit number 49 exits=0
+[ 8311.573866] CPUID(0x4FFFFFFC), exit number 49 time in vmm: 0 cycles
+[ 8311.573869]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.595121] CPUID(0x4FFFFFFD), exit number 50 exits=0
+[ 8311.598246] CPUID(0x4FFFFFFC), exit number 50 time in vmm: 0 cycles
+[ 8311.598249]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.620379] CPUID(0x4FFFFFFD), exit number 51 exits=0
+[ 8311.623029] CPUID(0x4FFFFFFC), exit number 51 time in vmm: 0 cycles
+[ 8311.623031]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.643371] CPUID(0x4FFFFFFD), exit number 52 exits=0
+[ 8311.646126] CPUID(0x4FFFFFFC), exit number 52 time in vmm: 0 cycles
+[ 8311.646129]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.666451] CPUID(0x4FFFFFFD), exit number 53 exits=0
+[ 8311.669314] CPUID(0x4FFFFFFC), exit number 53 time in vmm: 0 cycles
+[ 8311.669317]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.690138] CPUID(0x4FFFFFFD), exit number 54 exits=6
+[ 8311.693043] CPUID(0x4FFFFFFC), exit number 54 time in vmm: 47368 cycles
+[ 8311.693046]  --- (0x4FFFFFFC), registers: ebx=0, ecx=47368
+[ 8311.714037] CPUID(0x4FFFFFFD), exit number 55 exits=2
+[ 8311.716819] CPUID(0x4FFFFFFC), exit number 55 time in vmm: 25768 cycles
+[ 8311.716822]  --- (0x4FFFFFFC), registers: ebx=0, ecx=25768
+[ 8311.738223] CPUID(0x4FFFFFFD), exit number 56 exits=0
+[ 8311.741317] CPUID(0x4FFFFFFC), exit number 56 time in vmm: 0 cycles
+[ 8311.741320]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.763186] CPUID(0x4FFFFFFD), exit number 57 exits=0
+[ 8311.766402] CPUID(0x4FFFFFFC), exit number 57 time in vmm: 0 cycles
+[ 8311.766405]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.787615] CPUID(0x4FFFFFFD), exit number 58 exits=26815
+[ 8311.790843] CPUID(0x4FFFFFFC), exit number 58 time in vmm: 820376476 cycles
+[ 8311.790846]  --- (0x4FFFFFFC), registers: ebx=0, ecx=820376476
+[ 8311.812406] CPUID(0x4FFFFFFD), exit number 59 exits=0
+[ 8311.815157] CPUID(0x4FFFFFFC), exit number 59 time in vmm: 0 cycles
+[ 8311.815160]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.837276] CPUID(0x4FFFFFFD), exit number 60 exits=0
+[ 8311.840166] CPUID(0x4FFFFFFC), exit number 60 time in vmm: 0 cycles
+[ 8311.840169]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.862454] CPUID(0x4FFFFFFD), exit number 61 exits=0
+[ 8311.865523] CPUID(0x4FFFFFFC), exit number 61 time in vmm: 0 cycles
+[ 8311.865526]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.887043] CPUID(0x4FFFFFFD), exit number 62 exits=0
+[ 8311.889976] CPUID(0x4FFFFFFC), exit number 62 time in vmm: 0 cycles
+[ 8311.889979]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.912407] CPUID(0x4FFFFFFD), exit number 63 exits=0
+[ 8311.915426] CPUID(0x4FFFFFFC), exit number 63 time in vmm: 0 cycles
+[ 8311.915430]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.937154] CPUID(0x4FFFFFFD), exit number 64 exits=0
+[ 8311.940206] CPUID(0x4FFFFFFC), exit number 64 time in vmm: 0 cycles
+[ 8311.940209]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8311.962482] CPUID(0x4FFFFFFD|0x4FFFFFFC), value 65 not defined by the SDM
+[ 8311.962485]  --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=0, ebx=0, ecx=0, edx=4294967295
+[ 8311.984876] CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 66 not enabled in KVM
+[ 8311.984879]  --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=0, ebx=0, ecx=0, edx=0
+[ 8312.008008] CPUID(0x4FFFFFFD), exit number 67 exits=0
+[ 8312.011106] CPUID(0x4FFFFFFC), exit number 67 time in vmm: 0 cycles
+[ 8312.011109]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8312.033446] CPUID(0x4FFFFFFD), exit number 68 exits=0
+[ 8312.036579] CPUID(0x4FFFFFFC), exit number 68 time in vmm: 0 cycles
+[ 8312.036582]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
+[ 8312.058529] CPUID(0x4FFFFFFD|0x4FFFFFFC), exit type 69 not enabled in KVM
+[ 8312.058532]  --- (0x4FFFFFFD|0x4FFFFFFC), registers: eax=0, ebx=0, ecx=0, edx=0
