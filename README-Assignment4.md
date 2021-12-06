@@ -7,8 +7,8 @@
 *
 
 ## Questions to be answered:
-2. Include a sample of your print of exit count output from dmesg from “with ept” and “without ept”.
-- dmesg output "without ept"
+### 2. Include a sample of your print of exit count output from dmesg from “with ept” and “without ept”.
+- dmesg output (ept=0 NOT set)
 ```
 [ 7970.134443] CPUID(0x4FFFFFFF), exits=695480
 [ 7970.134729] CPUID(0x4FFFFFFE), total time in vmm: 10055375136 cycles
@@ -391,25 +391,25 @@
 
 ```
 
-3. What did you learn from the count of exits? Was the count what you expected? If not, why not?
+### 3. What did you learn from the count of exits? Was the count what you expected? If not, why not?
 - 
 
-4. What changed between the two runs (ept vs no-ept)?
+### 4. What changed between the two runs (ept vs no-ept)?
 - Some exits didn't trigger when ept=0, but triggered when no ept set, such as:
-* exit # 48 - EPT violation
-* exit # 49 - EPT misconfiguration
+    * exit # 48 - EPT violation
+    * exit # 49 - EPT misconfiguration
 - Some exits triggered when ept=0, but did not trigger when no ept set:
-* exit # 14 - INVLPG
-* exit # 33 - VM-entry failure due to invalid guest state
-* exit # 58 - INVPCID
+    * exit # 14 - INVLPG
+    * exit # 33 - VM-entry failure due to invalid guest state
+    * exit # 58 - INVPCID
 - The counts for certain exit reasons when ept=0 were LARGER than without ept set:
-* exit # 0 - Exception or non-maskable interrupt (NMI)
-* exit # 7 - Interrupt window
-* exit # 10 - CPUID
-* exit # 28 - Control-register accesses
+    * exit # 0 - Exception or non-maskable interrupt (NMI)
+    * exit # 7 - Interrupt window
+    * exit # 10 - CPUID
+    * exit # 28 - Control-register accesses
 - The counts for certain exit reasons when ept=0 were SMALLER than without ept set:
-* exit # 1 - External interrupt
-* exit # 12 - HLT
-* exit # 30 - I/O instruction
-* exit # 31 - RDMSR
-* exit # 40 - PAUSE
+    * exit # 1 - External interrupt
+    * exit # 12 - HLT
+    * exit # 30 - I/O instruction
+    * exit # 31 - RDMSR
+    * exit # 40 - PAUSE
