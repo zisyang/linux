@@ -1,10 +1,19 @@
 # CMPE 283 Assignment - 4
 
 ## Zi Shun Yang(007562568):
-*
+* Setup to create a nested VM for the program to execute
+* Built the linux kernel 
+* Debugged and performed the required changes to fix the errors which occurred while compiling the code
+* Capture outputs from the test runs (ept vs no-ept)
+* Created Documentation
 
 ## Rohan Patel(010745904):
-*
+* Helped build the kernel and debugged errors while building the linux kernel 
+* Error handling while performing the compilation
+* Tester code for running tests
+* Analyse the changes between the two test runs 
+* Updated Documentation
+
 
 ## Questions to be answered:
 ### 2. Include a sample of your print of exit count output from dmesg from “with ept” and “without ept”.
@@ -390,9 +399,10 @@
 [ 8312.036582]  --- (0x4FFFFFFC), registers: ebx=0, ecx=0
 
 ```
+- Please refer to [283_assign4/](283_assign4/) folder for detail of outputs
 
 ### 3. What did you learn from the count of exits? Was the count what you expected? If not, why not?
-- The ept flag for ept vs no-ept caused exits in different ways. Total exit count was higher when ept=0 is set meaning that forcing KVM to use shadow paging could cuase many exits. What I expected is that the changes should only affect exit reasons related to EPT, but some of others were also changed.
+- The ept flag for ept vs no-ept caused exits in different ways. Total exit count was higher when ept=0 is set meaning that forcing KVM to use shadow paging could cuase many exits, which it makes sense that the KVM reflect the shadow page tables that are kept by the hypervisor, and it needs to exit.
 
 ### 4. What changed between the two runs (ept vs no-ept)?
 - Some exits didn't trigger when ept=0, but triggered when no ept set, such as:
@@ -413,3 +423,5 @@
     * exit # 30 - I/O instruction
     * exit # 31 - RDMSR
     * exit # 40 - PAUSE
+
+
