@@ -402,7 +402,7 @@
 - Please refer to [283_assign4/](283_assign4/) folder for detail of outputs
 
 ### 3. What did you learn from the count of exits? Was the count what you expected? If not, why not?
-- The ept flag for ept vs no-ept caused exits in different ways. Total exit count was higher when ept=0 is set meaning that forcing KVM to use shadow paging could cuase many exits, which it makes sense that the KVM reflect the shadow page tables that are kept by the hypervisor, and it needs to exit. In the end, we learned that shadow paging in relation to nested paging had noticeably more exits due to the reason being that for nested paging VM exits occur when EPT violation happens. As per our anticipation, when nested paging executes page walk the page tables rapidly updated compared to shadow paging in turn needing exorbitant hypervisor arbitration with page table changes.
+- The ept flag for ept vs no-ept caused exits in different ways. Total exit count was higher when ept=0 is set meaning that forcing KVM to use shadow paging could cuase many exits, which it makes sense that the KVM reflect the shadow page tables that are kept by the hypervisor, and it needs to exit. In the end, we learned that shadow paging in relation to nested paging had noticeably more exits due to the reason being that for nested paging VM exits occur whenever EPT violation happens. As per our anticipation, when nested paging executes page walk the page tables rapidly updated compared to shadow paging in turn needing exorbitant hypervisor arbitration with page table changes.
 
 
 ### 4. What changed between the two runs (ept vs no-ept)?
